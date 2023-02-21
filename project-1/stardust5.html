@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		body {
+			background: black;
+			color: #fff;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		a:visited {
+			color: #ffe8ff;
+			text-decoration: none;
+		}
+		.background {
+			position: absolute;
+			opacity: 50%;
+			top: -10%;
+		}
+
+		.navigator {
+          position: absolute;
+          top: 10px;
+          left: 50px;
+          font-size: 7px;
+      		filter:blur(1px);
+           transition: 1s ease;
+        }
+
+        .navigator:hover {
+          filter:blur(0px);
+          transition: 1s ease;}
+
+        .next {
+          position: absolute;
+          top: 10px;
+          right: 5px;
+          font-size: 7px;
+      filter:blur(1px);
+           transition: 1s ease;}
+
+        .next:hover {
+          filter:blur(0px);
+           transition: 1s ease;
+        }
+
+        /*--containers--*/
+			
+		}
+		.bigcontainer {
+			display: flex;
+			flex-direction: column;
+			padding-top: 20px;
+		}
+		.rowcontainer {
+			margin: -30px 0px;
+
+		}
+		.box {
+			flex-direction: column;
+			font-family: monospace;
+		    font-size: 16px;
+		    width: 400px;
+		    margin: 10px 25px 5px;
+		    opacity: 50%;
+		    transition: 1.5s;
+		}
+
+		.box:hover {
+			opacity: 100%;
+		}
+
+		.source {
+			font-family: monospace;
+			font-size: 10px;
+			position:absolute;
+			left:40%;
+		}
+		    
+		}
+		.subtitle {
+		    font-size: 18px;
+		    padding: 5px;
+		    opacity: 100%;
+		    text-align: center;
+		}
+		.bodytext {
+			opacity: 60%;
+			padding: 0px -10px;
+			filter:blur(2px);
+			transition: 1.5s;
+		}
+		.bodytext:hover {
+			filter:blur(0px);
+		}
+		#title {
+			filter:blur(0px);
+		}
+
+		/*textbox alignments*/
+
+		#div0 {
+			padding-top: 50px;
+			margin: 85px 25px 80px;
+			position: relative;
+			left: 10%;
+			font-size: 25px;
+			width: 80%;
+			opacity: 100%;
+			animation: fade 7s infinite;
+			text-shadow: 
+					      
+					      0 0 2px #fff,
+					      0 0 5px #fff,
+					      0 0 10px #fff,
+					      0 0 15px #808080,
+					      0 0 20px #808080,
+					      0 0 25px #808080,
+					  	  0 0 30px #808080;
+			
+		}
+
+		#div1 {
+			position: relative;
+			left: 10%;
+			padding-bottom: 35px;
+		}
+
+		#div2 {
+			position: relative;
+			left: 35%;
+			padding-bottom: 5px;
+		}
+
+		#div3 {
+			position: relative;
+			left: 8%;
+		}
+
+		#div4 {
+			position: relative;
+			left: 30%;
+		}
+		#div5 {
+			position: relative;
+			left: 60%;
+		}
+
+		#div6 {
+			position: relative;
+			height: 10px;
+			padding: 50px;
+		}
+
+		.glowwhite {
+			animation: fade1 3s infinite;
+		}
+		.glowwhite2 {
+			animation: glowwhite 2s ease-in-out infinite alternate;
+		}
+
+		@-webkit-keyframes glowwhite {
+	  		from { text-shadow: 
+	  			          
+					      0 0 2px #fff,
+					      0 0 5px #fff,
+					      0 0 10px #fff,
+					      0 0 15px #b3b3b3,
+					      0 0 20px #b3b3b3,
+					      0 0 25px #b3b3b3;}
+
+	  		to { text-shadow: 
+					      
+					      0 0 5px #808080,
+					      0 0 10px #808080,
+					      0 0 15px #808080,
+					      0 0 20px #808080,
+					      0 0 25px #808080,
+					  	  0 0 30px #808080;}
+		}
+		@-webkit-keyframes fade1{
+                0%{opacity: 50%;}
+                50%{opacity: 85%}
+                100%{opacity: 50%;}
+            }
+
+		@-webkit-keyframes fade{
+                0%{opacity: 50%;}
+                50%{opacity: 100%}
+                100%{opacity: 50%;}
+            }
+
+	</style>
+</head>
+<body>
+<div class="background">
+<pre>                                          ∙           ∙                                                                                                                                                 
+                                                            ∙∙                                                                                                                                          
+                              ∙∙                              ∙                                                                                                                                         
+                                                     <span class="glowwhite">┼</span>                                                                                                                                                  
+             <span class="glowwhite2">°</span>              ∙                                                                                                                                                  ∙                        
+                                                            ∙           <span class="glowwhite">┼</span>                                               ∙∙                                        <span class="glowwhite">┼</span>                  ∙                  
+                                                <span class="glowwhite2">°</span>       ∙    <span class="glowwhite2">°</span>                                                           ∙                           ∙      ∙                      ∙  ∙    ∙  ∙         
+                 ∙         ∙                              <span class="glowwhite2">°</span>                                                             ∙∙  <span class="glowwhite2">°</span>                 ∙   ∙            ∙                                        
+                                       <span class="glowwhite2">°</span>               ∙               ∙                                                              ∙                        ∙                       ∙                
+         ∙                                                                                            ∙                                ∙                          ∙                                     
+                  ∙ ∙                             ∙                                             ∙                            ∙                        ∙           ∙       ∙ ∙   ∙                       
+            ∙  ∙                                            ∙        ∙                               ∙                                         ∙        ∙∙      ∙                   ∙     ∙             
+                       ∙                    ∙  ∙                        ∙                                               ∙       ∙ ∙                     ∙     ∙              ∙                          
+            ∙  ∙              <span class="glowwhite2">°</span>                                                                                                            ∙       ∙∙                                                   
+                               ∙ ∙∙    ∙ ∙ ∙    ∙                               ∙                                   ∙                         ∙    ∙        ∙                            ∙              
+                    ∙              ∙                                                                  ∙   <span class="glowwhite2">°</span>   <span class="glowwhite2">°</span>    ∙    <span class="glowwhite2">°</span>                         ∙ ∙   ∙                             ∙  ∙         ∙    
+                                                                 ∙                        ∙   <span class="glowwhite2">°</span>                      ∙<span class="glowwhite2">°</span>                ∙        ∙              <span class="glowwhite2">°</span>              ∙   <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                    
+         ∙              ∙ <span class="glowwhite2">°</span>       <span class="glowwhite2">°</span>                    ∙                      ∙            <span class="glowwhite2">°</span>                  ∙           <span class="glowwhite2">°</span> <span class="glowwhite2">°</span>     ∙       <span class="glowwhite2">°</span>   ∙∙           <span class="glowwhite2">°</span><span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>   <span class="glowwhite2">°</span>          ∙                       
+               <span class="glowwhite2">°</span>∙                                                       ∙   <span class="glowwhite2">°</span>           <span class="glowwhite2">°</span>            ∙     ∙                  ∙             ∙  ∙    ∙                                                   
+                                                  <span class="glowwhite2">°</span>                ∙                                                           ∙  ∙    ∙                          <span class="glowwhite2">°</span>                    ∙      ∙         
+                   ∙                            ∙           ∙ ∙  <span class="glowwhite2">°</span>               <span class="glowwhite2">°</span>               ∙      ∙            ∙                                                                        ∙         
+         ∙   ∙                                     ∙         <span class="glowwhite2">°</span>                                 ∙        ∙    ∙        ∙ ∙   ∙                                   ∙ <span class="glowwhite2">°</span><span class="glowwhite2">°</span>  ∙       ∙∙                        
+                    ∙  ∙                <span class="glowwhite2">°</span>∙  ∙∙                                                ∙                                    ∙                                               ∙                   <span class="glowwhite2">°</span>
+            ∙∙      ∙  ∙       ∙       ∙    ∙        ∙                               ∙           ∙           ∙        ∙                           ∙              <span class="glowwhite2">°</span>           ∙                ∙         
+∙              ∙∙∙   ∙                 ∙        ∙                                                                                                           <span class="glowwhite2">°</span>                               ∙           
+              ∙∙                      ∙      ∙       <span class="glowwhite2">°</span>                                         ∙                                                                   ∙                                    
+                                       ∙           <span class="glowwhite2">°</span>                                    ∙                            ∙   ∙    <span class="glowwhite2">°</span>                         <span class="glowwhite2">°</span>                        ∙                      
+        ∙                         <span class="glowwhite2">°</span> ∙   ∙                               ∙                                                                                        ∙           ∙∙                         
+           ∙                                                                  ∙                                                        <span class="glowwhite2">°</span>                 <span class="glowwhite2">°</span>        ∙          ∙                          
+∙          <span class="glowwhite2">°</span>                    ∙           <span class="glowwhite2">°</span>                                        ∙      <span class="glowwhite2">°</span>                                                                                                           
+           <span class="glowwhite2">°</span>         ∙                    <span class="glowwhite2">°</span>                                        ∙                                                                        <span class="glowwhite2">°</span>                                           
+           <span class="glowwhite2">°</span> ∙           ∙     ∙    <span class="glowwhite">┼</span>               ∙                                                                                                    ∙                                              
+               ∙                      <span class="glowwhite2">°</span>                                                                        <span class="glowwhite2">°</span>                   <span class="glowwhite2">°</span>                            <span class="glowwhite2">°</span>     ∙∙                                
+                   ∙                <span class="glowwhite2">°</span><span class="glowwhite2">°</span>     ∙                ∙                                                         <span class="glowwhite2">°</span>     <span class="glowwhite2">°</span>                                                                           
+                  ∙              ∙ ∙ ∙                                      <span class="glowwhite">┼</span>              <span class="glowwhite2">°</span>                                                                                               ∙            
+ ∙             ∙  ∙                                               ∙                                     <span class="glowwhite2">°</span>                                                           <span class="glowwhite2">°</span>                     ∙             
+ ∙             <span class="glowwhite2">°</span>    ∙                 ∙        <span class="glowwhite2">°</span>                ∙                                                      ∙                                           <span class="glowwhite2">°</span>                                    
+                                       ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span>                    ∙∙                     ∙                                                                ∙                                                 
+  ∙                  <span class="glowwhite2">°</span> <span class="glowwhite2">°</span>                 ∙                    <span class="glowwhite2">°</span>                                        ∙                                                                     <span class="glowwhite">┼</span>            ∙             
+                   <span class="glowwhite2">°</span>          ∙                           ∙     <span class="glowwhite2">°</span>                   <span class="glowwhite2">°</span>         ∙                                       <span class="glowwhite2">°</span>                          ∙                           ∙          
+                  <span class="glowwhite2">°</span>                        ∙         ∙       <span class="glowwhite2">°</span>   <span class="glowwhite2">°</span>                   <span class="glowwhite2">°</span>                       ∙            ∙                        <span class="glowwhite2">°</span>                                      ∙∙            
+       ∙                       ∙          <span class="glowwhite2">°</span>            <span class="glowwhite2">°</span>          <span class="glowwhite2">°</span> ∙                                             ∙                    ∙                                                                
+      ∙        ∙           ∙ ∙ ∙                  ∙                    ∙               ∙    <span class="glowwhite2">°</span>     ∙          ∙                                                                                          
+                            ∙                ∙∙                               ∙ ∙  ∙     <span class="glowwhite2">°</span>                   ∙        ∙  ∙                                                                      <span class="glowwhite2">°</span>       
+                     ∙  ∙                    <span class="glowwhite2">°</span>       ∙             <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span><span class="glowwhite2">°</span> <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                         <span class="glowwhite2">°</span>     ∙ ∙                                                                                         
+   ∙       <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                         ∙                                              ∙             <span class="glowwhite2">°</span>                                                         ∙       <span class="glowwhite2">°</span>                                  
+                                          ∙∙                        ∙     ∙          ∙                                               ∙            ∙                                                     
+         ∙                         <span class="glowwhite2">°</span>               ∙           ∙     ∙        <span class="glowwhite2">°</span> ∙              <span class="glowwhite2">°</span>    ∙∙      ∙                           ∙                     ∙      ∙             <span class="glowwhite2">°</span>                    
+            ∙ ∙∙   <span class="glowwhite2">°</span><span class="glowwhite2">°</span>    <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                                      <span class="glowwhite2">°</span>                                 ∙   <span class="glowwhite2">°</span>            ∙                                                      ∙∙                           
+         ∙      ∙<span class="glowwhite2">°</span>∙          <span class="glowwhite2">°</span>                                                                                    ∙      ∙      ∙                                 ∙  <span class="glowwhite2">°</span>       ∙                          
+  ∙                                      ∙                                               <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                           ∙∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span>                                                               ∙              
+                <span class="glowwhite2">°</span>  ∙                ∙∙         ∙                                                           ∙             ∙                                     ∙     <span class="glowwhite2">°</span>    ∙  ∙           <span class="glowwhite2">°</span>              
+            <span class="glowwhite2">°</span>  ∙                ∙             <span class="glowwhite2">°</span> <span class="glowwhite2">°</span>        ∙                    ∙                                    <span class="glowwhite2">°</span>                                                                      <span class="glowwhite2">°</span>             
+                                              ∙                            <span class="glowwhite2">°</span>                                                                    <span class="glowwhite2">°</span>   ∙        <span class="glowwhite2">°</span>                    ∙    ∙                
+     ∙                         <span class="glowwhite2">°</span>             ∙                      ∙           ∙                          ∙                             <span class="glowwhite2">°</span><span class="glowwhite2">°</span>         ∙                                ∙      ∙           
+                                    ∙     ∙                ∙∙      ∙ ∙             ∙                                                            <span class="glowwhite">┼</span>                       ∙             <span class="glowwhite2">°</span>                 
+                                       ∙  <span class="glowwhite2">°</span> ∙                                                                                                   ∙                              <span class="glowwhite2">°</span>                        
+      <span class="glowwhite2">°</span>       ∙                          ∙                                                       ∙        ∙                             ∙                                            ∙∙  ∙              
+      <span class="glowwhite2">°</span>                         ∙      <span class="glowwhite2">°</span>  ∙<span class="glowwhite2">°</span>                                                                                         ∙  ∙                                                               
+                ∙      <span class="glowwhite">┼</span>                                    ∙                   ∙                                    <span class="glowwhite2">°</span>                                   ∙                             ∙ ∙              
+   <span class="glowwhite2">°</span>  ∙                       ∙        ∙                       ∙                                                                                                          ∙        ∙ ∙                 ∙
+   <span class="glowwhite2">°</span>                                  ∙        ∙               ∙                       ∙∙∙                               <span class="glowwhite2">°</span>      ∙   ∙                             <span class="glowwhite2">°</span>  ∙        ∙  ∙                      
+                             ∙             ∙                                    ∙ ∙∙          <span class="glowwhite2">°</span>                                                                   <span class="glowwhite2">°</span>          ∙                 <span class="glowwhite2">°</span>        
+    <span class="glowwhite2">°</span>      ∙                 ∙                                                                                          ∙                                    ∙  <span class="glowwhite2">°</span><span class="glowwhite2">°</span>       ∙           <span class="glowwhite2">°</span>                  
+    <span class="glowwhite2">°</span>    ∙∙                                    ∙                                                                                                                <span class="glowwhite2">°</span>         ∙                             
+    <span class="glowwhite2">°</span>                        ∙       ∙                      ∙                                           ∙         ∙                                          <span class="glowwhite2">°</span>                                          
+                             ∙     ∙∙                                                   ∙                                                                <span class="glowwhite2">°</span>          ∙                                   
+                  ∙                ∙                           ∙    ∙                                                                   <span class="glowwhite2">°</span>                                                               
+                                    ∙                                                                     <span class="glowwhite2">°</span> ∙              ∙                      <span class="glowwhite2">°</span><span class="glowwhite2">°</span><span class="glowwhite2">°</span>                       ∙                           
+                                     ∙                                                                                                                    ∙                            <span class="glowwhite2">°</span>                
+                                                                      ∙                                                ∙∙             ∙               ∙                        ∙                        
+                                                                                                        ∙              ∙                            ∙    ∙                       <span class="glowwhite2">°</span>           <span class="glowwhite2">°</span>          
+                                ∙             ∙      ∙              ∙         ∙                         ∙∙        ∙        ∙                                       <span class="glowwhite2">°</span>       <span class="glowwhite2">°</span>                            
+        <span class="glowwhite2">°</span>         ∙∙                                                                      ∙                       ∙                                             <span class="glowwhite2">°</span>                      <span class="glowwhite2">°</span>      ∙         
+                  ∙               ∙∙∙                                                            ∙  ∙                                    ∙        ∙                      ∙            <span class="glowwhite2">°</span>    ∙            
+                  ∙∙        ∙      ∙      ∙                            <span class="glowwhite2">°</span>                   ∙                           ∙                                                              <span class="glowwhite2">°</span>    ∙<span class="glowwhite2">°</span>           
+          ∙                                          ∙                       <span class="glowwhite2">°</span>                      ∙                         ∙  <span class="glowwhite2">°</span>          ∙  ∙                   ∙                                    
+  ∙                 ∙∙                       ∙                                                                 ∙              ∙∙       ∙ ∙∙∙                 <span class="glowwhite">┼</span>                                          
+                  <span class="glowwhite2">°</span>         ∙      ∙          ∙                      ∙                               ∙ ∙∙∙                 ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙                                                                         
+                                           ∙ ∙       ∙                                           ∙      ∙        ∙                                                                              ∙       
+                                                            ∙     ∙  ∙∙     ∙   ∙           ∙                                 ∙                              ∙                                          
+                <span class="glowwhite2">°</span>        ∙                   <span class="glowwhite2">°</span>                 ∙                       ∙         ∙∙    ∙                                                                              ∙                 
+                <span class="glowwhite2">°</span>        ∙                      ∙                                    ∙                     ∙                                                                           ∙                
+           ∙                      ∙                     ∙               ∙ ∙  ∙<span class="glowwhite2">°</span>                                                                      ∙                               ∙            ∙     
+                         <span class="glowwhite">┼</span>                                 ∙              <span class="glowwhite2">°</span>                                ∙                                                                      ∙                     
+                                                                   <span class="glowwhite2">°</span>                                                                                                                                    
+                              <span class="glowwhite2">°</span>   ∙                            <span class="glowwhite2">°</span>                                         ∙                                                                     ∙     <span class="glowwhite2">°</span>                  
+               ∙                   ∙        ∙                                                                      ∙                ∙    <span class="glowwhite2">°</span>                          ∙          ∙         ∙              
+ ∙                       <span class="glowwhite2">°</span> <span class="glowwhite2">°</span>         ∙                  ∙               ∙                        ∙      <span class="glowwhite2">°</span>                     <span class="glowwhite2">°</span>                                    ∙∙        ∙             ∙            
+                                           ∙                                             ∙ <span class="glowwhite2">°</span>∙ ∙                                                         <span class="glowwhite2">°</span>                                               
+                                           <span class="glowwhite2">°</span>∙  <span class="glowwhite2">°</span>     ∙  ∙                        ∙  ∙       ∙                    ∙           <span class="glowwhite2">°</span>             <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>                     ∙             ∙    ∙              
+                                       <span class="glowwhite2">°</span><span class="glowwhite2">°</span>  ∙           ∙           ∙                                                                                <span class="glowwhite2">°</span><span class="glowwhite2">°</span>   ∙                 ∙   ∙                        
+                 <span class="glowwhite2">°</span>                 ∙   <span class="glowwhite2">°</span>            ∙                  ∙                                                                               ∙ ∙∙               ∙         ∙ ∙                 
+                                              ∙           ∙     ∙    ∙   <span class="glowwhite2">°</span>                            ∙   ∙          <span class="glowwhite2">°</span>                ∙∙                                  ∙     ∙∙                      
+                                   ∙        ∙∙∙      ∙                                   ∙                                           ∙       ∙∙               ∙     ∙      ∙ ∙      ∙ ∙                 
+                             ∙     ∙    ∙     ∙                                ∙<span class="glowwhite2">°</span>                            ∙<span class="glowwhite2">°</span>       ∙          ∙         ∙                  ∙∙∙          ∙∙          ∙       <span class="glowwhite2">°</span><span class="glowwhite2">°</span>       
+          ∙      ∙                                ∙      ∙∙∙∙                                            <span class="glowwhite2">°</span>                  <span class="glowwhite2">°</span>                                <span class="glowwhite2">°</span>∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙         ∙                            
+      ∙        ∙                     ∙     <span class="glowwhite2">°</span>         <span class="glowwhite2">°</span> ∙                       ∙    ∙      ∙         ∙                                                       ∙∙   ∙              ∙                    ∙ 
+           ∙      ∙             <span class="glowwhite2">°</span>         ∙ ∙ <span class="glowwhite2">°</span>       <span class="glowwhite2">°</span>      ∙                                                   ∙                     ∙                         ∙ ∙  <span class="glowwhite2">°</span>       ∙                         
+  <span class="glowwhite2">°</span>                      ∙                  ∙  <span class="glowwhite2">°</span>              ∙          <span class="glowwhite2">°</span>    ∙                     <span class="glowwhite2">°</span>             ∙            ∙                               ∙   <span class="glowwhite2">°</span>∙     ∙          ∙            ∙∙    
+   <span class="glowwhite2">°</span>         ∙                      ∙      ∙    <span class="glowwhite">┼</span>                                             ∙                     ∙        ∙   ∙                                ∙  ∙          ∙  ∙         ∙          
+      <span class="glowwhite2">°</span>  ∙                                                      <span class="glowwhite2">°</span>             ∙  ∙∙                       <span class="glowwhite2">°</span><span class="glowwhite2">°</span><span class="glowwhite2">°</span>                               ∙       ∙∙∙           ∙               ∙  ∙                  
+                                  ∙                     ∙        ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span> <span class="glowwhite2">°</span>                                                     ∙                    ∙    ∙∙∙∙    ∙    ∙∙ <span class="glowwhite2">°</span>∙ ∙    <span class="glowwhite2">°</span> ∙∙ ∙    ∙                
+          ∙          ∙                                   ∙              <span class="glowwhite2">°</span>   ∙    ∙                                             ∙                     ∙  <span class="glowwhite2">°</span>            <span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙ ∙∙  <span class="glowwhite2">°</span>∙   <span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙                   
+                      ∙    ∙      ∙                           ∙     ∙     ∙              ∙                <span class="glowwhite2">°</span>          ∙      <span class="glowwhite2">°</span>            <span class="glowwhite2">°</span>∙             <span class="glowwhite2">°</span> ∙∙          ∙ ∙           ∙ ∙  <span class="glowwhite2">°</span>              
+                   ∙ <span class="glowwhite2">°</span>        ∙  ∙                                      ∙∙      <span class="glowwhite2">°</span><span class="glowwhite2">°</span>               ∙         <span class="glowwhite2">°</span>                        ∙                   ∙  ∙          ∙∙∙           ∙        ∙          
+                      ∙          ∙              ∙                                ∙                      <span class="glowwhite2">°</span>           ∙∙          <span class="glowwhite2">°</span>                       ∙           ∙   ∙∙∙            ∙                
+                                     ∙ ∙              ∙                           ∙      ∙  <span class="glowwhite2">°</span>            ∙            ∙         ∙                                    ∙∙∙ ∙<span class="glowwhite2">°</span>       ∙                     
+  <span class="glowwhite2">°</span>                      ∙ ∙            <span class="glowwhite2">°</span>                                                     ∙  <span class="glowwhite2">°</span> <span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙∙   <span class="glowwhite2">°</span>         <span class="glowwhite2">°</span>  ∙                          ∙           ∙    ∙        ∙∙                          
+                                                                <span class="glowwhite2">°</span>        <span class="glowwhite2">°</span>                                ∙              ∙   ∙  <span class="glowwhite2">°</span><span class="glowwhite2">°</span><span class="glowwhite2">°</span>                 ∙    ∙∙     ∙ <span class="glowwhite2">°</span>∙                 <span class="glowwhite2">°</span>                  
+      <span class="glowwhite2">°</span>                                                       ∙         ∙       <span class="glowwhite2">°</span>                     ∙∙  <span class="glowwhite2">°</span>      ∙  ∙    ∙∙∙ ∙                                 ∙   <span class="glowwhite2">°</span>  ∙  ∙∙          <span class="glowwhite2">°</span>∙ <span class="glowwhite2">°</span>               
+         <span class="glowwhite2">°</span>      ∙                                    ∙                                                       <span class="glowwhite2">°</span>     <span class="glowwhite2">°</span>  ∙                ∙                     ∙                  ∙                       
+    ∙                                                        ∙                                                              ∙      ∙∙ ∙  ∙  ∙               <span class="glowwhite2">°</span>∙        <span class="glowwhite2">°</span>∙ ∙∙∙   ∙                     <span class="glowwhite2">°</span>  
+                                                                                                                 ∙   ∙   <span class="glowwhite2">°</span>      ∙  ∙   <span class="glowwhite2">°</span>     <span class="glowwhite2">°</span>∙ <span class="glowwhite2">°</span>    ∙ ∙          ∙ ∙  ∙∙∙   ∙∙         <span class="glowwhite2">°</span>               
+        ∙                        <span class="glowwhite2">°</span>            ∙∙   ∙                                           ∙                           ∙∙        ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span><span class="glowwhite2">°</span>       ∙        <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span> ∙<span class="glowwhite2">°</span>                                      
+                                  ∙                                                  <span class="glowwhite2">°</span>     <span class="glowwhite2">°</span><span class="glowwhite2">°</span>         ∙                    ∙∙      ∙∙∙∙∙<span class="glowwhite2">°</span> <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>          <span class="glowwhite2">°</span>        ∙ ∙                                  
+        ∙ ∙            <span class="glowwhite2">°</span>                                                        <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>   <span class="glowwhite2">°</span>                     ∙ ∙   ∙               <span class="glowwhite2">°</span>       ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span> <span class="glowwhite2">°</span>        <span class="glowwhite2">°</span>        ∙<span class="glowwhite2">°</span>∙       ∙ ∙                        
+   ∙ ∙        ∙                                                         <span class="glowwhite2">°</span>           ∙                                    ∙            <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙∙<span class="glowwhite2">°</span>  <span class="glowwhite2">°</span><span class="glowwhite2">°</span>  ∙ ∙          ∙∙   ∙    ∙∙∙                        
+               ∙                   ∙ ∙     <span class="glowwhite">┼</span>                    ∙       <span class="glowwhite2">°</span>                      <span class="glowwhite2">°</span>                                     <span class="glowwhite2">°</span>            ∙∙           ∙        ∙                               
+            ∙                                                                <span class="glowwhite2">°</span>                                                        <span class="glowwhite2">°</span> <span class="glowwhite2">°</span>  <span class="glowwhite2">°</span>∙ <span class="glowwhite2">°</span><span class="glowwhite2">°</span>    ∙     ∙∙<span class="glowwhite2">°</span>∙∙    ∙                                    
+∙ ∙           <span class="glowwhite2">°</span>                                                                 <span class="glowwhite2">°</span>                  ∙       ∙            <span class="glowwhite">┼</span>               ∙ ∙                                         ∙                   
+                               ∙         ∙                                               <span class="glowwhite2">°</span>    ∙                                        ∙                                                                
+       ∙                 ∙  ∙                                                    ∙                                  ∙∙              ∙ ∙   <span class="glowwhite2">°</span>           ∙           ∙  ∙            ∙             ∙       
+      ∙∙                 ∙                                              ∙      ∙                            <span class="glowwhite2">°</span>        ∙        ∙      <span class="glowwhite2">°</span><span class="glowwhite2">°</span>  ∙      ∙                                                       
+            ∙               ∙                         ∙              ∙ ∙                                                      ∙   <span class="glowwhite2">°</span>  <span class="glowwhite2">°</span>       ∙                    ∙                                     
+                     ∙ ∙      ∙                                                                                  ∙         ∙  <span class="glowwhite2">°</span><span class="glowwhite2">°</span><span class="glowwhite2">°</span>  <span class="glowwhite2">°</span>   ∙                                                                
+                       ∙                                                <span class="glowwhite2">°</span><span class="glowwhite2">°</span>                                  ∙  ∙         <span class="glowwhite2">°</span><span class="glowwhite2">°</span> ∙<span class="glowwhite2">°</span>    ∙                                                                     
+                          ∙                                                          <span class="glowwhite2">°</span>                ∙∙ <span class="glowwhite2">°</span><span class="glowwhite2">°</span>∙                                 <span class="glowwhite2">°</span><span class="glowwhite2">°</span>  ∙   <span class="glowwhite2">°</span>                                                  
+                                ∙                                                                    ∙                 ∙<span class="glowwhite2">°</span><span class="glowwhite2">°</span>         ∙    <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>                                                          
+                                                ∙ ∙                                                 ∙        <span class="glowwhite2">°</span>    <span class="glowwhite2">°</span>   ∙      ∙    <span class="glowwhite2">°</span>          <span class="glowwhite2">°</span>       <span class="glowwhite2">°</span>                                                  
+</pre>
+</div>
+<div class="bigcontainer">
+
+	<div class="rowcontainer">
+		<div class="navigator">
+    <a href=test.html> <pre>  .
+ *.
+.* * *
+ * *.  **.
+ *  *.    * .
+.*    **
+ *     *.
+.       **
+          *.
+           . <br> return to stars</pre> </a>
+  </div>
+  <div class="next">
+    <a href=test.html#target2> <pre>          ..
+      ..*...
+  *.**  ...*
+**       * *
+      **   .
+     *     *
+     .     *
+   *       .
+          .
+*.
+           . <br> next constellation</pre> </a>
+  </div>
+
+		<div class="box" id="div0">
+			<marquee behavior="alternate" scrollamount="6">
+
+			<div class="bodytext" id="title">
+			we are made of stardust from old supernovas
+			</div>
+			</marquee>
+			<div class="source"> <a href="https://earthhow.com/we-are-made-of-stardust/"> <br>---✧ 04.12.2022 ✧--- </a></div>
+		
+
+			</div>
+		</div>
+	</div>
+
+	<div class="rowcontainer">
+		<div class="box" id="div1">
+
+			<div class="bodytext">
+			&nbsp;&nbsp; The atoms in your body were created at the start of our universe during the Big Bang. So if you look at it this way, then you’re about 13.7 billion years old. But your body also has heavier elements like copper and zinc. These atoms were created in the dying stage of an exploding star called a supernova. These elements were flung into space as dust and gas (stardust). Eventually, they coalesced to become part of a new forming solar system and our planet Earth. Because you are made from matter from the Earth, you are made of stardust from old supernovas. 
+			</div>
+
+			<div class="subtitle"> So turns out, you are bits and pieces of star and cosmic dust.</div>
+		</div>
+	</div>
+
+	<div class="rowcontainer">
+		<div class="box" id="div2">
+			<div class="subtitle">
+			&nbsp;why are stars like element factories? 
+			</div>
+			<div class="bodytext">
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;As we already know, hydrogen and helium have been around since the Big Bang. So stars (like our Sun) take lighter elements like hydrogen and build heavier ones like helium, carbon, and oxygen. It’s through fusion reaction that stars build elements of their own. But stars can only produce elements as heavy as iron. Anything heavier is made when the star becomes a supernova. When a star is at the end of its life, its temperature begins to increase. At about 200 million degrees, helium fuses into carbon and oxygen. Then at above 3 billion degrees, it creates silicon, iron, and nickel. If our sun was bigger, it would go through the process of a supernova. High-mass stars simply don’t burn out of fuel. Instead, it ejects matter violently into space building &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heavier elements like uranium.
+			</div>
+		</div>
+	</div>
+
+	<div class="rowcontainer">
+		<div class="box" id="div3">
+			<div class="subtitle">
+			how do supernovas build heavier elements? 
+			</div>
+			<div class="bodytext">
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;Stars larger than our sun goes through a faster cycle with more intense pressure. But larger stars have so much energy that they don’t simply die and turn into a white dwarf.Instead, they expand into a red super-giant and then explode in a dramatic event called a supernova. It blasts material dramatically into space. Eventually, they can then collapse as a neutron star or black hole.Supernova is important because they form the more complicated elements on Earth from hydrogen to uranium. Supernovas build anything in our periodic table that is heavier than iron.The process of building heavier atoms than hydrogen is called nucleosynthesis. It happens because neutron gets added into much larger atoms. These are the 92 natural elements, many of which are used to create rocks and minerals.
+			</div>
+		</div>
+	</div>
+
+	<div class="rowcontainer">
+		<div class="box" id="div4">
+			<div class="subtitle">
+			how do our sun's fusion reactions work? 
+			</div>
+			<div class="bodytext">
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;Fusion smashes two or more atomic nuclei together and builds a heavier nucleus. For example, our Sun constantly fuses hydrogen into helium. This process releases energy and sunlight, constantly warming our planet. When stars like our Sun finish using hydrogen in the core, then it will begin fusing the leftover helium into carbon and oxygen. When this begins, the star will swell up into a red giant. Based on the initial mass of the star, successive fusion reactions may follow. Starting with hydrogen, it can fuse into helium, carbon, oxygen, neon, silicon, and iron. If the star has more mass, then it will go further down the chain of reactions all the way up to iron. But if a star has enough mass to fuse iron, it will then supernova once that fusion is complete.
+			</div>
+		</div>
+	</div>
+
+	<div class="rowcontainer">
+		<div class="box" id="div5">
+			<div class="subtitle">
+			will our sun ever turn into a supernova? 
+			</div>
+			<div class="bodytext">
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;Like any fire, eventually, they always burn out in the end. Our Sun is no different. It’s at about halfway through its life expectancy with about 4 billion more years remaining. Our Sun won’t become a supernova and will collapse into a white dwarf. Actually, the vast majority of stars die in a much less violent manner. This is why we classify it in the lightweight category. Whereas heavyweight stars have the most fuel but burn their fuel at a faster rate. In general, supernovas are quite rare because stars need to be massive to die this way. 
+				</div>
+
+				<div class="subtitle">
+					<br>
+					&nbsp;&nbsp;After they violently explode, they disperse throughout the galaxy and become part of a newly forming solar system.
+					<br>
+				</div>
+		
+			</div>
+
+</div>
+
+	<div class="rowcontainer" id="div6">
+	<div class="source">
+		<br> <a href="stardust5.html">back to top?</a>
+	</div>
+	</div>
+
+</div>
+</body>
+</html>

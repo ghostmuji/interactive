@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		body {
+			background: black;
+			color: #fff;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		.glowwhite {
+			animation: fade 3s infinite;
+		}
+		.glowwhite2 {
+			animation: glowwhite 2s ease-in-out infinite alternate;
+		}
+
+		@-webkit-keyframes glowwhite {
+	  		from { text-shadow: 
+	  			          
+					      0 0 2px #fff,
+					      0 0 5px #fff,
+					      0 0 10px #fff,
+					      0 0 15px #b3b3b3,
+					      0 0 20px #b3b3b3,
+					      0 0 25px #b3b3b3;}
+
+	  		to { text-shadow: 
+					      
+					      0 0 5px #808080,
+					      0 0 10px #808080,
+					      0 0 15px #808080,
+					      0 0 20px #808080,
+					      0 0 25px #808080,
+					  	  0 0 30px #808080;}
+		}
+		@-webkit-keyframes fade{
+                0%{opacity: 50%;}
+                50%{opacity: 85%}
+                100%{opacity: 50%;}
+            }
+
+		/*	heart constellation	*/
+
+		.glowpink {
+			animation: glow 1s ease-in-out infinite alternate;
+		}
+
+		@-webkit-keyframes glow {
+	  		from { text-shadow: 
+	  			          0 0 1px #fff,
+					      0 0 2px #fff,
+					      0 0 5px #db7bc0,
+					      0 0 10px #db7bc0,
+					      0 0 15px #db7bc0,
+					      0 0 20px #db7bc0,
+					      0 0 25px #db7bc0;}
+
+	  		to { text-shadow: 
+					      
+					      0 0 5px #e897d1,
+					      0 0 10px #e897d1,
+					      0 0 15px #e897d1,
+					      0 0 20px #e897d1,
+					      0 0 25px #e897d1,
+					  	  0 0 30px #e897d1;}
+		}
+		.heart {
+			position: absolute;
+			    top: 1165px;
+    			left: 1002px;
+			    mix-blend-mode: lighten;
+			    opacity: 0%;
+			    transition-duration: 1.5s;
+			    width: 145px;
+			}
+
+		.heart:hover {
+			opacity: 100%;
+		}
+
+		a:visited, .heart{
+			opacity: 30%;
+		}
+
+		/*	instructions divs	*/
+
+		.instructions {
+			font-family: monospace;
+		    filter: blur(2px);
+		    transition: 1s 180s;
+		    text-shadow: 0 0 2px #fff, 0 0 6px #fff;
+		    width: 150px;
+		    height: 100px;
+		    position: absolute;
+		    align-items: center;
+		    justify-content: center;
+		    display: flex;
+		    position: absolute;
+		}
+
+		.instructions:hover {
+			filter:blur(0px);
+			transition: 1s;
+		}
+
+		#one {
+			top: 210px;
+			left: 300px;
+		}
+
+		#two {
+			top: 400px;
+			left: 550px;
+		}
+
+		#three {
+			top: 550px;
+    		left: 900px;
+		}
+
+		#four {
+			top:1100px;
+			left: 390px;
+			transition: 1s;
+			width:200px;
+		}
+
+		#five {
+			top: 1700px;
+   			left: 1150px;
+   			transition: 1s;
+   			width: 200px;
+		}
+
+		#six {
+			top: 2100px;
+   			left: 1100px;
+   			transition: 1s;
+		}
+
+		#seven {
+			top: 850px;
+   			left: 1800px;
+   			transition: 1s;
+   		}
+
+   		#eight {
+			top:1650px;
+			left: 400px;
+			opacity: 75%;
+			width:200px;
+		}
+
+		#guide1 {
+			top: 1000px;
+   			left: 1600px;
+   			transition: 1s;
+		}
+
+		/*	hand constellation	*/
+
+		.hand {
+				position: absolute;
+			    top: 1775px;
+    			left: 650px;
+			    mix-blend-mode: lighten;
+			    opacity: 0%;
+			    transition-duration: 1.5s;
+			    width: 600px;
+		}
+
+		.hand:hover {
+			opacity: 100%;
+		}
+
+		a:visited, .hand{
+			opacity: 50%;
+		}
+
+
+		/*	stardust constellation	*/
+
+		.stars {
+			position: absolute;
+		    top: 780px;
+		    left: 1870px;
+		    mix-blend-mode: lighten;
+		    opacity: 0%;
+		    transition-duration: 1.5s;
+		    width: 180px;
+		}
+
+		.stars:hover {
+			opacity: 100%;
+		}
+
+		a:visited, .stars{
+			opacity: 50%;
+		}
+
+		.glowblue {
+			animation: glowblue 1s ease-in-out infinite alternate;
+		}
+
+		@-webkit-keyframes glowblue {
+	  		from { text-shadow: 
+	  			          0 0 1px #fff,
+					      0 0 2px #fff,
+					      0 0 5px #84dbfa,
+					      0 0 10px #84dbfa,
+					      0 0 15px #84dbfa,
+					      0 0 20px #84dbfa,
+					      0 0 25px #84dbfa;}
+
+	  		to { text-shadow: 
+					      0 0 2px #fff,
+					      0 0 5px #c5eefc,
+					      0 0 10px #c5eefc,
+					      0 0 15px #c5eefc,
+					      0 0 20px #c5eefc,
+					      0 0 25px #c5eefc,
+					  	  0 0 30px #c5eefc;}
+					  	}
+
+		/* easter eggs */
+		.redstar {
+			color: #ffb8c8;
+			text-shadow: 
+	  			          0 0 1px #fff,
+					      0 0 2px #fff,
+					      0 0 5px #ff2b5d,
+					      0 0 10px #ff2b5d,
+					      0 0 15px #ff2b5d,
+					      0 0 20px #ff2b5d,
+					      0 0 25px #ff2b5d;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="instructions" id="one">
+		go that way ↘
+	</div>
+	<div class="instructions" id="two">
+		   look around    
+	</div>
+	<div class="instructions" id="three">
+		<pre>
+	this is a webzine about the universe
+		     
+		⬋  what do you see?  ⬊
+		</pre>
+	</div>
+	<div class="instructions" id="four" title="keep looking">
+		     do you see love? ⟶
+
+	</div>
+	<div class="instructions" id="five">
+		      do you see yourself? <br>&nbsp;&nbsp; ↙
+	</div>
+
+	<div class="instructions" id="six" title="(zoom out)">
+		<a id="target2">
+		      do you see<br>&nbsp;&nbsp;&nbsp;&nbsp; the universe?
+	</div>
+
+	<div class="instructions" id="seven">
+			<a id="target">
+		      do<br> &nbsp;you<br>&nbsp;&nbsp; see<br>&nbsp;&nbsp;&nbsp; star <br>&nbsp;&nbsp;&nbsp; &nbsp; dust<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?
+	</div>
+
+	<div class="instructions" id="eight">
+		     promise me you'll <br>&nbsp; &nbsp; &nbsp; look for love
+
+	</div>
+
+
+	<div>
+		 <a href="eyeball5.html"><img class ="heart" title="enter?" src="heart.png"></a>
+	</div>
+
+	<div>
+		<a href="stardust5.html"><img class="stars" title="touch?" src="stars.png"></a>
+	</div>
+
+	<div>
+		<a href="endpoem4.html"><img class="hand" title="look closer?" src="hand.png"></a>
+	</div>
+
+
+<div id="blur">
+<pre>
+	                                                                                                 ∙                                                                                                                                                                                                         
+               ∙   ∙    ∙                                                                                ∙         ∙                                                                                                                                                                                             
+                                 ∙                                                                                              ∙                                                              ∙                                                                                                                             
+                                                                                                                                                                                                                                                                                                            
+                       ∙                                                                                                                                                                                                                                                                                        
+                                                                              ∙                                 ∙                                                                                                                                                                                           
+                   ∙                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                            
+                                                   ∙                                                                        ∙                                                                                                          ∙                                                                   ⋅
+                                                                                                  ∙             ∙  ∙        ∙                                                    ∙                                                                                                                          
+                    ∙                                                                                                    ∙    ∙∙   ∙                                                                                                                                                        ⋅               
+                                                                                                                          ∙                                                                              ⋅                                                                                                  
+  ⋅⋅                                    ∙             ∙        ∙                                                               ∙                                 ⋅                                                                                                                                  ⋅       
+⋅⋅ ⋅                         ∙                                                                    ∙   ∙                        ∙                                                             ∙∙                                       ∙                                                           ⋅   ⋅     
+   ⋅⋅                           ∙                                    ∙                                                                                                                                                                                                                                      
+    ⋅                       ∙  ∙                 ∙                   ∙                ∙                                                                                                                                               ∙                     ∙                                               
+ ⋅ ⋅ ⋅⋅      ⋅∙                                                                                                                                                                                                                                                                          ⋅ ⋅      
+⋅⋅⋅⋅        ⋅               ∙     ∙                                                   ∙                                                                                                                                            ∙                                           ⋅                       ⋅    
+ ⋅ ⋅   ⋅                    ∙                      ∙                                                                                     ∙                       ⋅       ⋅                                                                                   ⋅                                           ⋅ ⋅
+ ⋅ ⋅           ⋅  ⋅                                                                                       ⋅                                              ⋅                                   ⋅                      ∙                                                                       ⋅           ⋅   
+   ⋅ ⋅        ⋅                ∙ ∙∙                                                                                              ∙                                                                                  ⋅                               ⋅                                 ⋅           ⋅         
+                                                                                                                                             ⋅                                                                                                                                 <span class="glowwhite">+</span>      ⋅   ⋅                 
+ ⋅ ⋅  ∙⋅⋅   ⋅           ∙      ∙  ∙ ∙                                                          ∙                                   ∙            ∙                                                                                                                             ⋅       ⋅                     
+     ⋅ ⋅    ⋅      ⋅  ∙          ⋅                              ∙                                                  ⋅    ⋅    ⋅                 ∙                                                                                                                   ∙      ⋅                                 
+          ∙  ⋅⋅∙ ⋅⋅                                                                                                ⋅                               ∙                                                                                                                 ⋅    <span class="glowwhite">+</span>                                 
+                               ∙ ∙  ∙      ⋅  ⋅                                                                                                    ∙                                                                                                              ⋅                                         
+   ⋅       ∙  ∙    ∙⋅             ∙     ∙                     ∙                                                                                                      ⋅                                                                                  ⋅                                                   
+                                      ⋅            ∙    ∙                            ∙                                                             ∙                                                                                                                                                        
+ ⋅                              ⋅        ∙                                          ∙                 ⋅                                                                                                                                                       ⋅          ⋅                                  
+            ∙ ∙                          ∙                                        ⋅       ⋅                                                     ⋅        ∙                                                                                                     ⋅                     ∙                      
+                          ∙                      ∙                                                                                                                                                                                <span class="glowwhite">+</span>               <span class="glowwhite">+</span>     <span class="glowwhite">+</span>                                                   
+                                                        ⋅                    ∙                                ∙                                           ∙                                                                                                                                                 
+    ∙        ∙                                   ∙                    ∙                     ∙            ∙             ∙∙                       ∙   ∙∙    ⋅                                                                     ⋅                     ⋅     ⋅                                         
+                                                        ∙   ⋅   ∙     ⋅                             ∙            ⋅                                                 ⋅                                                                                                                                        
+                  ∙      ∙       ∙                          ∙                                    ∙                                                                                                ⋅                                                     <span class="glowwhite">+</span>                             ∙                     
+                                                                                                                                                                       ⋅ ⋅                            <span class="glowwhite">+</span>                                                        ⋅                                            
+      ∙                             ∙                                           ⋅                       ∙                                                                                                                                  ⋅          ⋅        ⋅     <span class="glowwhite">+</span>                                      
+                        ∙                                            ∙              ∙                                                                             ∙      ∙∙            ⋅                                                                    ⋅                                               
+                                                                                ∙                                                                                                                ⋅                                                        ⋅                            ∙                    
+                                                                              ∙                                                                                         ∙                                                                               ⋅                                                   
+                                 ∙         ∙                            ∙             ⋅                                                                                 ∙                   ∙                    ⋅⋅                                                                     ∙                   
+                                                                                            ⋅                                                                                                                                                                                        ∙                
+                   ∙                                                                             ∙                                                                    ⋅                      ⋅                                                ⋅    ⋅                                                        
+                                     ∙          ∙                                ⋅           ⋅ ⋅                                             <span class="glowwhite">+</span>      ⋅                                                          ⋅                                                                                        
+                                                                                      ∙       ∙  ⋅                     <span class="glowwhite">+</span>                ⋅                                                              ∙                              ⋅                                                                     
+                         ∙                                                                                     ∙     ∙                                       ∙                               ∙        ∙         ∙∙  ∙                 ⋅                                                                     
+                         ∙                                                                    ∙            ⋅ ∙∙     ∙⋅ ∙                        ∙      ∙           ∙       ∙     ∙    *∙          ∙   <span class="glowwhite">+</span>  ∙∙∙∙   <span class="glowwhite">+</span>         ∙                   ⋅                          <span class="glowwhite">+</span>                                  
+                                                                                  ⋅                   ∙     ∙               ∙          ∙                   ∙       ∙                   ∙  ∙      * ∙ ∙∙∙      ∙  ∙∙  ∙      ∙              ⋅                                                                
+                                                                                  ⋅ ⋅            ∙  ∙∙∙∙  ∙  ∙ ∙          ∙ <span class="glowwhite">+</span>   ∙   ∙           ∙                                    ∙∙           *      ∙                   ∙    ∙    ∙                                                                    
+                                         ∙                                                                                ∙    ∙∙ ∙         ∙  ∙    ∙      ∙             ∙    ∙ ∙      ○  ○              <span class="glowwhite">+</span>        ∙* **          ∙     ∙                                                                    
+                                      ⋅∙                                                   ∙                <span class="glowwhite">+</span>          ∙  ∙  ∙          ∙                      ∙   ∙               ∙   ∙     ∙  ∙  ∙  ∙         ∙*∙ ⋅      * ∙ ∙ ∙    ∙                                                                     
+                                                                                                                       ∙∙          ∙∙                                          <span class="glowwhite2">┼</span>                          ∙      ⋅          ∙*   ∙  ⋅  <span class="glowwhite">+</span>          <a class="glowblue" href=stardust5.html><span class="glowwhite">+</span></a>                                                         
+                                ∙                                                   ∙                                  ∙       ⋅  ∙                ∙     ○      <span class="glowwhite">+</span> <span class="glowwhite">+</span>             ○                                                                  ∙∙                                                       
+                                ∙     ∙                                                                   ⋅                                                                                  ○                 ⋅                            ⋅ ⋅<a class="glowblue" href=stardust5.html><span class="glowwhite">+</span></a>      <a class="glowblue" href=stardust5.html>*</a>                                                     
+                                                                      ∙                                        ∙ ∙                                                               <span class="glowwhite">+</span>      <span class="glowwhite">+</span>         ∙                                           <a class="glowblue" href=stardust5.html>○ ∙</a>         ∙ ∙                                               
+                                                                       ∙                           ∙    ∙ ∙               ○                   ⋅  <span class="glowwhite">+</span>  ⋅     ∙   ⋅   ⋅   ∙ <span class="glowwhite">+</span>      ⋅                                                 ○                   ∙                                                      
+                                    ∙                                              ∙            ⋅∙                   ○             ∙    ⋅⋅   ⋅    ∙                                <span class="glowwhite">+</span>            ∙                                                 <a class="glowblue" href=stardust5.html>○</a>   ∙                                                     
+                                                                                          <span class="glowwhite">+</span>                                            ∙        ∙             ∙         ∙       ∙  <span class="glowwhite">+</span>⋅      <span class="glowwhite">+</span>    ∙     <span class="glowwhite">+</span>                                                   <a class="glowblue" href=stardust5.html>∙  ∙                                              
+                         ∙</a>                                                          <span class="glowwhite">+</span>         ∙                           ∙  ⋅         ∙          ○○       <span class="glowwhite">+</span>          <span class="glowwhite2">┼</span>          ∙  ⋅  <span class="glowwhite">+</span>   <span class="glowwhite">+</span> <span class="glowwhite">+</span>                ⋅                                            ∙∙                                               
+                                                                                <span class="glowwhite">+</span>   ⋅     ∙            ⋅ ∙ ∙      ∙         ∙      <span class="glowwhite">+</span>    ○        <span class="glowwhite">+</span>                              <span class="glowwhite">+</span>     ∙                <span class="glowwhite">+</span>                                       ○           ∙                                                
+                                                                       ⋅                    ∙                 ∙    ∙∙  <span class="glowwhite">+</span> <span class="glowwhite">+</span>     ∙∙ ○     ○       <span class="glowwhite">+</span>                                ∙   ⋅      ∙       <span class="glowwhite">+</span>                 ⋅                                        <a class="glowblue" href=stardust5.html><span class="glowwhite">+</span></a>  ∙                                         
+             ∙      ∙        ∙                                                                                ∙ ∙∙∙<span class="glowwhite">+</span>⋅∙        ∙∙    ○              ○○∙<span class="glowwhite">+</span>  <span class="glowwhite">+</span>○  <span class="glowwhite">+</span><span class="glowwhite">+</span>  ○∙∙   ⋅            ⋅∙                <span class="glowwhite">+</span>     <span class="glowwhite">+</span>                                             ∙ ∙ ∙    ∙                                        
+              ∙∙                                    ∙                 ⋅ ⋅                                  ∙       <span class="glowwhite">+</span>∙∙  ⋅ ∙ ∙ <span class="glowwhite">+</span><span class="glowwhite">+</span>○ ∙∙  ∙ ∙∙  ○∙ <span class="glowwhite">+</span><span class="glowwhite">+</span> ∙  ⋅      ∙∙  ∙○   ○ <span class="glowwhite">+</span>  ∙○   ○ ∙∙○         ⋅   ∙                       ⋅                         <a class="glowblue" href=stardust5.html>○  ○</a>       ∙∙  ∙∙ <a class="glowblue" href=stardust5.html>☆</a>                                      
+              ∙                                     ∙                                             ∙   ∙ ∙∙                  <span class="glowwhite">+</span>∙  <span class="glowwhite">+</span>   ∙  ∙    <span class="glowwhite">+</span>                   ∙     ∙    ○  ○∙      ∙                       ∙                                               ∙∙  ∙∙ ∙                                      
+                                           ∙                         ○           ∙  ⋅                    ○       ∙ ∙     ○  ○○<span class="glowwhite">+</span>∙∙             ○     ∙∙   ⋅  ∙         ⋅⋅      ∙○   ∙                   <span class="glowwhite">+</span> ∙  <span class="glowwhite">+</span>                                         ○ ∙   <a class="glowblue" href=stardust5.html><span class="glowwhite">+</span>☆∙</a>                                      
+                                                                ∙ ⋅                                     ○       ∙  <span class="glowwhite">+</span>    ∙       ⋅  ○ ○∙    ∙∙∙   ⋅    ∙ ○∙∙ ⋅     ∙   ⋅       ⋅  ○○∙∙∙   ○∙∙∙   <span class="glowwhite">+</span>                                    ⋅                          ☆☆∙ ∙                                    
+                                                      ∙                          ∙              ∙             ∙     ∙   ∙∙  <span class="glowwhite">+</span> ○   ∙<span class="glowwhite">+</span>  ∙ ∙   ⋅∙∙     ☆        ∙∙      ○              ⋅ ∙○∙  ∙∙∙              ∙                                                 ∙                                      
+                                                ∙⋅      <span class="glowwhite">+</span>                      ∙                         ∙  ⋅    ⋅           ○      <span class="glowwhite">+</span>  <span class="glowwhite">+</span>    ⋅<span class="glowwhite">+</span>     ⋅        <span class="glowwhite">+</span>  <span class="glowwhite">+</span>   <span class="glowwhite">+</span>○○           ⋅        <span class="glowwhite">+</span> ∙                     <span class="glowwhite">+</span>                                                      ∙∙ ∙ ∙                                    
+                                              ∙∙⋅                                                        <span class="glowwhite">+</span> ∙∙。    ⋅  ∙          ∙  <span class="glowwhite">+</span> ∙       ⋅  ⋅         ∙∙ <span class="glowwhite">+</span> <span class="glowwhite">+</span>  ∙      ∙                 <span class="glowwhite">+</span> ∙     ○○  <span class="glowwhite">+</span>                                                  ∙∙  ∙                                    
+                                                                                                ∙ ∙ ∙     <span class="glowwhite">+</span>  ∙。       ∙  ○     。  ⋅       ⋅       ∙∙∙  ○∙∙   ∙      ∙∙  ○○∙<span class="glowwhite">+</span>     ∙            <span class="glowwhite">+</span>    ∙∙              ∙               ∙                      ⋅          ∙<span class="glowwhite">+</span>∙                                      
+                                  ∙  ∙   ∙                                                ∙         ∙ <span class="glowwhite">+</span>  ∙    ⋅   ⋅                         ∙∙ <span class="glowwhite">+</span> ∙     ∙  ∙       ∙<span class="glowwhite">+</span>          ∙ ○∙          <span class="glowwhite">+</span>    ∙∙      ○                                                        ⋅ ∙    *                                  
+                                 ∙                                                  ∙            ∙  ∙ <span class="glowwhite">+</span> ☆       <span class="glowwhite">+</span>  ⋅                 ∙  ∙   。∙∙∙☆。。。<span class="glowwhite2">┼</span>。。                       ∙                   ○∙            ⋅                                                          ∙                                
+                            ☆  ☆ ○ ∙∙                                                       <span class="glowwhite2">┼</span>  ∙  ∙ <span class="glowwhite">+</span> <span class="glowwhite">+</span>。∙       <span class="glowwhite">+</span>  ⋅  。      ∙ ∙   ∙∙。   。 ⋅∙ 。<span class="glowwhite">+</span>⋅⋅。 。∙<span class="glowwhite">+</span>。                         ∙○   ⋅     ○  ∙∙ ∙          ∙          ⋅                                    <span class="glowwhite">+</span>     ∙                                 
+                          ☆  ∙ ∙ ○                                                            ∙∙ ∙∙ 。      ∙          <span class="glowwhite2">┼</span>      ∙  ∙  ○。。⋅○○。  ∙    ⋅    。∙∙∙。。。            <span class="glowwhite">+</span>         ∙     <span class="instructions" id="guide1">this way ↗</span>          ∙    ○                         ∙                     ○       ∙                                       
+                            ∙  ☆     ⋅                                          ∙∙           ∙∙∙∙∙ ∙  ∙<span class="glowwhite">+</span> ∙     ⋅            ∙∙∙    。<span class="glowwhite">+</span><span class="glowwhite">+</span>  。⋅  ∙           ∙ <span class="glowwhite">+</span>。。    ∙                   ∙  ∙ ∙           <span class="glowwhite">+</span>   ∙∙    ∙⋅    <span class="glowwhite">+</span>                                           ○                                         
+                          ☆           ○                                         ∙            ∙∙。<span class="glowwhite">+</span> ∙    ∙                  。   ∙⋅<span class="glowwhite">+</span> <a class="glowpink pink" href="eyeball5.html">。<span class="glowwhite">+</span></a>∙∙ ∙∙∙  <a class="glowpink pink" href="eyeball5.html"><span class="glowwhite">+</span></a>   ⋅    ∙∙  ∙  ∙。  。。 ∙     。                ∙  ⋅     ○        ○ ⋅                    ⋅                                ∙                                       
+                    <span class="glowwhite">+</span>                                                                       ∙ ∙  <span class="glowwhite">+</span>  ∙        ⋅              <span class="glowwhite2">┼</span>⋅∙<span class="glowwhite">+</span>。     <a class="glowpink pink" href="eyeball5.html">∙ ☆。 ⋅</a>   ∙∙       ⋅ ∙    <span class="glowwhite">+</span>  。。      ⋅⋅     ⋅ ⋅       ⋅∙    <span class="glowwhite">+</span>   ○    ∙      <span class="glowwhite">+</span>                                                                                          
+                            ⋅                                                               ∙   <span class="glowwhite">+</span><span class="glowwhite">+</span>                        <span class="glowwhite">+</span> ⋅○∙<span class="glowwhite">+</span>  <a class="glowpink pink" href="eyeball5.html"><span class="glowwhite">+</span></a>      ∙   ∙∙         ⋅    ⋅⋅  ∙ ∙ ∙ 。。       ⋅          ○       。   ○ <span class="glowwhite">+</span>            ∙    ∙       ⋅                               <span class="glowwhite">+</span>                                        
+                   <span class="glowwhite">+</span>      ∙ ○  ○                                               ∙               ∙。     ○○   ☆              <span class="glowwhite">+</span> ⋅⋅<span class="glowwhite">+</span><span class="glowwhite">+</span><span class="glowwhite">+</span> ○∙       。。。∙∙∙   ⋅ ⋅ ⋅ ∙  ⋅      ∙∙   。           ⋅                <span class="glowwhite">+</span>  <span class="glowwhite">+</span>                                                 ○       ∙                                        
+                       ⋅ ∙        ○                                                         <span class="glowwhite">+</span>∙○               <span class="glowwhite">+</span>⋅     。 。    ⋅⋅ ⋅⋅ <span class="glowwhite">+</span><a class="glowpink pink" href="eyball5.html"><span class="glowwhite">+</span>       ⋅○</a>∙∙<span class="glowwhite">+</span>  <span class="glowwhite">+</span>               ☆   ∙<span class="glowwhite">+</span>。                          ∙      <span class="glowwhite">+</span>                      ⋅    ∙                            ∙                                        
+                    ∙    ⋅                                                   ⋅ ∙⋅          <span class="glowwhite">+</span><span class="glowwhite">+</span> ∙∙<span class="glowwhite">+</span>。       ○○        ⋅         ∙ ⋅⋅ ⋅<span class="glowwhite">+</span><span class="glowwhite">+</span><span class="glowwhite">+</span><span class="glowwhite">+</span>⋅⋅⋅ ∙⋅⋅          ∙⋅          ○ 。  ∙     <span class="glowwhite2">┼</span>                     ○ <span class="glowwhite">+</span>                   ⋅ <span class="glowwhite2">┼</span>                               ∙                ⋅                             
+                    ⋅                                                    ⋅     ∙    。    ∙   ∙  。<span class="glowwhite">+</span>。 ⋅  ⋅ ○          ⋅  ⋅⋅     ⋅ ⋅ ⋅∙ ⋅<a class="glowpink pink" href="eyball5.html">⋅<span class="glowwhite">+</span>⋅</a>   ⋅⋅⋅  ⋅   ⋅ ⋅       <span class="glowwhite">+</span>   ∙∙  ∙  ⋅               <span class="glowwhite">+</span>         。                     ∙  <span class="glowwhite2">┼</span>                                   ∙                                          
+                   ⋅      ○                                                                   ∙ ⋅ 。∙∙               ⋅        <span class="glowwhite">+</span> 。           ⋅⋅                   ∙∙∙     ∙     ⋅                          ○                 <span class="glowwhite">+</span>      ∙∙                ○        ∙                                              
+                 <span class="glowwhite">+</span>⋅⋅                                                 ⋅                        ☆∙∙ ∙   <span class="glowwhite">+</span>  。                    <span class="glowwhite">+</span>    。∙       ⋅       ∙    ⋅ ∙   ∙<span class="glowwhite">+</span> ⋅     ∙  ⋅                             <span class="glowwhite">+</span>           ⋅∙                                     <span class="glowwhite">+</span>  ⋅         ⋅                                  
+       ⋅    ⋅    ⋅                                                      ⋅       ∙ ∙ ∙         ⋅     。 。⋅∙<span class="glowwhite">+</span><span class="glowwhite">+</span>⋅       ∙∙         ⋅              ∙∙<span class="glowwhite">+</span> ∙ ∙  <span class="glowwhite">+</span>∙<span class="glowwhite">+</span>   ∙         ∙∙              ⋅          ∙    。  <span class="glowwhite">+</span>  <span class="glowwhite">+</span>                                             ∙∙                                                
+             ⋅                                        ⋅                                   ⋅         <span class="glowwhite">+</span> ⋅    ∙    ∙∙ ∙ ∙       ⋅             <span class="glowwhite">+</span>   <span class="glowwhite">+</span>∙ ∙ ∙<span class="glowwhite">+</span>  ∙∙<span class="glowwhite">+</span>                    ⋅                       <span class="glowwhite">+</span>                     ⋅             ○    ∙    ∙              ∙   ∙                                   
+     ⋅⋅    ⋅⋅  ⋅          <span class="redstar" title="this website was made for art369:software for people"><a href="https://2023.software-for-people.net/index.php">○</span> </a></span>○                                                                           ∙  ∙ ∙∙ <span class="glowwhite">+</span>     ∙     ∙⋅      <span class="glowwhite">+</span>   ∙      ∙∙<span class="glowwhite">+</span><span class="glowwhite">+</span>∙  ∙                ⋅∙⋅                            <span class="glowwhite">+</span>○      ⋅     ⋅                        ○  ∙                         ∙        ⋅                        
+           ∙  ⋅           ○                                                      ⋅                       ∙。。    ∙。 ⋅    ∙ ☆ ∙<span class="glowwhite">+</span> ∙   ∙∙∙ ∙∙∙ ∙ ∙         。∙ ∙   ∙         ∙∙       ∙              ∙  ⋅  ○○                             ∙            <span class="glowwhite">+</span> ∙ ∙     ∙                                               
+             ∙⋅*               ○                                                      ∙    ⋅              ⋅ ∙○      ∙∙      。∙ 。  ∙     ∙    ∙  ∙ ∙☆       <span class="glowwhite2">┼</span>                      ⋅             ∙   <span class="glowwhite">+</span><span class="glowwhite">+</span>○           ∙                    ∙            ∙                                                       
+       ⋅      ⋅⋅         ⋅     ○         ⋅                                                                    ⋅    ⋅∙   ⋅     ∙ ∙            ∙      ○○   ∙∙ ∙           ⋅                            ○○∙  。     <span class="glowwhite">+</span>                       ⋅                                                                   
+        ⋅     ⋅                                                                  ⋅         ∙        ∙         ∙ ∙      ∙        ○  ⋅             ∙ ∙∙   ⋅                                    ∙  ○  ○  ∙        ⋅∙   ⋅                             ∙                                                         
+             ⋅       ⋅⋅⋅    ⋅              ⋅                                        ⋅                        ∙  ∙   ∙  ∙            <span class="glowwhite">+</span>               ⋅   ⋅                                           ○       ⋅        ∙                               ∙                     ⋅                                
+               <span class="glowwhite">+</span>                                                              ⋅                            ⋅        ∙  ∙           ⋅    ⋅     ⋅       ⋅                               <span class="glowwhite">+</span>     ⋅ ⋅    <span class="glowwhite">+</span>     ⋅    ⋅       ⋅                                                                                     
+       ∙                  ∙                   ○                                                               ∙∙                   ⋅                ⋅                 <span class="glowwhite">+</span>                               <span class="glowwhite">+</span>。                                                                                                    
+          ⋅ * ⋅   <span class="glowwhite">+</span>                                                                              ∙<span class="glowwhite2">┼</span>                                                        ⋅               <span class="glowwhite">+</span>                  ○     ⋅∙     ∙   ∙                                                                                            
+          ⋅                 ∙                                                                               ∙    ⋅      ⋅      ○  ○                                    ○<span class="glowwhite">+</span>                    ☆            ∙     ∙           ○                                                                               
+         ⋅        *         ∙                                           ⋅      ⋅ ∙                                                                                                ○             <span class="glowwhite">+</span>         ∙   ∙∙                          ∙                                    ⋅                            
+    ⋅  ⋅⋅           ∙    ∙                      ○                        ∙                                 ∙         ⋅                                               <span class="glowwhite">+</span>        ⋅            <span class="glowwhite">+</span>         ⋅      ∙        <span class="glowwhite">+</span>                                                                                      
+      ⋅                                                                                                     ∙                                             ○                           ○<span class="glowwhite">+</span>                         <span class="glowwhite">+</span>                     ∙  ∙                                                                 
+         ⋅                        ⋅                             ∙  ∙ ⋅         ⋅                           ∙ ⋅         ⋅       ⋅             ⋅      ○ ⋅⋅                           ○   ∙  。      ∙         ∙    ⋅               。。                                                            ∙             
+           ⋅          <span class="glowwhite">+</span>             ⋅⋅                      ○      ⋅                  <span class="glowwhite">+</span>                    ∙              ⋅                                                        <span class="glowwhite">+</span>  ☆                   <span class="glowwhite">+</span>        ∙ ∙           ∙        ⋅                                                                 
+           ⋅              * *                                                                              ∙                                  ○           <span class="glowwhite">+</span>  ⋅        ○           <span class="glowwhite">+</span>⋅ ∙                    ○                            。                                                                    
+    ⋅    ∙                                                      ○    ○           ○    <span class="glowwhite">+</span>                          ○                                 ⋅⋅<span class="glowwhite">+</span>                  ∙○     ∙   ⋅⋅                                                                                                ⋅         ∙            
+                        ⋅∙                                                      ○           ○                      ○                       <span class="glowwhite">+</span>      <span class="glowwhite">+</span>             ∙  ∙    ○      。⋅<span class="glowwhite">+</span>                                             ∙                                                               ∙∙           
+                             ∙                                                           ○                                          ○        ⋅   ⋅    ∙ ∙     ○ ○        ⋅*** *                                     ∙    ∙                    ⋅                                               ∙             
+   ⋅  ⋅  ⋅               ∙       ∙∙  ☆                ⋅⋅                                       ○               ○<span class="glowwhite">+</span>      ○      ○            ○⋅∙  ∙  ○ ∙                。。 **** *  ☆                                 ∙∙        ⋅  。                                                                           
+                                  <span class="glowwhite">+</span>  ∙   ☆                                                            <span class="glowwhite">+</span>                      ⋅ ☆☆ ∙⋅            ∙                   ∙∙   *         <span class="glowwhite">+</span>                                      ∙        。                                                  ∙    ∙                
+                      ∙          ∙   ∙∙ ∙*  ∙                                                                       ☆                  ⋅ ∙      ☆  ○            <span class="glowwhite">+</span>  ∙∙** ☆∙                           <span class="glowwhite">+</span>                            ⋅∙     ∙              ⋅                                                   
+                                ⋅☆☆ ⋅∙∙ ∙∙*   ∙                                 ∙     ∙                    ∙                      ∙           ⋅                     * ⋅                                              ∙∙            ∙        ∙   ∙   ∙                                  ∙                    
+     ⋅                               ∙   <span class="glowwhite">+</span>     ∙            ∙     ∙                  ∙          ∙                    ⋅      ○∙ ⋅                       <span class="glowwhite">+</span>   ∙∙∙   ∙∙                                                   ∙    ∙         ⋅        ∙         ∙     ⋅                                             
+                                      ⋅ ⋅∙     ∙∙                  ∙               ∙       ⋅                        ⋅                                ∙              ⋅                                     。∙。  ∙ ∙         。         。 。  。。   。   。    ⋅∙∙  ∙⋅   ⋅    ⋅                                    
+       ⋅⋅          *                     ∙   ⋅∙ ∙∙      ∙   ∙   ∙  ∙            ∙ ⋅              ∙∙     ∙                                          ∙∙∙     *  **                                 ∙          ∙  ∙          ∙            ∙           ⋅* what do you 。 。∙∙          ⋅                 ⋅               
+       ⋅ ⋅                     * *  ∙*  ∙∙     ∙                  ∙∙     ∙     ∙∙            ∙                                             <a class="glowblue" href="endpoem4.html"><span class="glowwhite">+</span>  ∙       *   *   ∙∙</a>                           。  。      ∙∙                                    ⋅ ⋅        want to see?  ∙∙     ⋅                     。       ∙ ∙∙      
+                                         ∙       ⋅        **      ∙           ∙⋅                                                      ∙            *   ∙     ⋅ ∙       ⋅ ⋅ ⋅                ∙      ∙                                                。        ⋅ ∙    。                      ∙                
+                                              ∙ ∙                        ∙            ∙  ⋅ ∙ ∙            ⋅                 ∙   ∙  <span class="glowwhite">+</span>         ∙ ∙          *∙ ∙                   ⋅          ∙   ∙                                              ∙     ⋅        ⋅⋅  ∙       ∙   ∙∙     ∙ 。⋅               ∙∙  
+                                                                                                ∙ ∙∙            ⋅ ⋅∙                 *     ∙*            ∙         ⋅                                                                            ⋅  ∙  ∙                    ∙  ∙   。           ⋅             
+                                                                   ⋅             ∙ ∙    ∙   <a class="glowblue" href="endpoem4.html">* *∙**<span class="glowwhite">+</span> ∙∙∙ ∙  *∙</a>             *    *     ∙                        ∙                                                            ⋅                        ∙ ∙     ∙             ∙     ⋅ ∙                         
+                                                                              ⋅       ∙ ∙∙ ∙∙ * ∙  ∙∙   ∙             ∙        ∙              ⋅       ⋅  ∙   ⋅     ∙ ∙∙                                                                                     ∙                     ⋅                         
+                    ⋅       ⋅                 ∙  ∙   ∙  ∙             ∙∙      ∙∙            <a class="glowblue" href="endpoem4.html"><span class="glowwhite">+</span></a>   ∙∙                          <span class="glowwhite">+</span>          ∙             。 *   ⋅ 。                                                                                                。。   ⋅⋅                                       
+                                                ⋅                            ∙∙                        <span class="glowwhite">+</span>                        ⋅        ∙ ∙  ⋅       。                                                                                                           ⋅            ⋅       ⋅    ∙ ∙∙            
+⋅                      ⋅        ⋅       ∙ ∙                                           ∙                                                             ∙ ⋅                                                                                                                                     ⋅  ⋅            
+                                     ∙                                                           ∙                                           ⋅      ∙ ⋅   ∙  。                                                               ⋅                                                      ∙   ⋅         ⋅         
+                                                                ∙ ∙                      ⋅                         ⋅         ∙                             ∙                                ⋅                                                                                             ⋅                 
+                 ⋅                  ∙                                  ∙                                                                          ∙∙  ∙    。∙                                                                                                             ⋅⋅                                
+               ⋅                    ∙      ∙                                                                                                                ⋅                                ⋅                                                           ∙                     ⋅    ⋅   ⋅            ⋅      
+          ⋅                                                                                                                                             ∙∙             ∙∙  ∙                                                                                         ∙  ⋅   ∙   ∙    ⋅ ⋅               ⋅     
+                             ∙       ∙                                                                                                                  ∙     ⋅      ∙   ∙             ⋅     ⋅⋅                                                                                         ⋅                   
+                                 ∙  ∙                                 ∙                                                                           ∙              ∙∙                                                                                     ⋅                                  ⋅                
+               ∙      ∙        ∙     ∙                                                                                                        ∙                                                                          ∙           ∙       ⋅                                                
+     ∙       ⋅                                                         ∙                                                                          ∙     ∙ ∙      ∙∙           ∙                          ⋅                                                                                                  
+     ∙                                                                                                                                  ∙      ∙   ∙ ∙             ⋅⋅⋅⋅         ∙                                                   ∙  ⋅                                                                    
+                     ⋅                                                                                                                           ∙     ∙    ∙   ∙       ∙       ∙                                                                 ⋅                  ∙                                      
+                       ∙                                                                                                                                    ∙                   ⋅                                                                                         ⋅   ⋅                             
+            ∙       ⋅                                                                    ∙                                        ∙∙                                            ∙∙                                                      ∙       ⋅                                                       ⋅∙  
+                                         ∙                                                                                     ∙                                                   ∙                                                                                                                        
+                  ⋅    ∙                                                              ∙        ∙                               ∙            ∙                                         ∙                                                                                                                     
+⋅                  ∙                                                                                                                                                                ∙∙∙             ⋅                                                                                                       
+            ⋅                     ∙ ∙ ∙                                                          ∙             ∙               ∙   ⋅                                           。      ∙  ∙   ⋅                                                                                        ⋅                     
+                                                                                 ∙∙                                                                                   ∙                                                    ⋅∙⋅                                                         ⋅                    
+                                                        ∙                    ∙                 ∙                                              ∙                                           ∙                                                         ∙         ⋅                                             
+                                                                                                                                               ∙                              ∙           ∙                                                                   ⋅                               ⋅             
+              ⋅                      ∙                                                                                                           ∙                               ∙∙    ∙                             ∙                    ⋅                                                                 
+                                                                                                                                     ∙                                                                    ∙                                                                                                 
+                                                                                  ∙                                                                              ∙                ∙                   ∙                                                  ∙              ∙                                   
+                                                ∙                                                                                                                  ∙                ∙                                                                ∙                                                      
+                                                                                                                                                                                     ∙                             ∙ ∙      ∙                                                                               
+                                                                        ∙                                                                                                       ∙    ∙∙                                                      ∙                                                              
+                                                                                                                             ∙                                                   ∙                                                                                                                          
+                                                                                                           ∙               ∙                      ∙                                     ∙  ∙∙                      ∙                                                                                        
+    ⋅                                                                                                                                                                                    ∙            ∙                                                                                                     
+ </pre>
+</div>
+</body>
+</html>
