@@ -1,0 +1,157 @@
+/* scene */
+@font-face { font-family: Pixel; src: url('pixelfont.ttf');}
+.header-image {
+    width: 100%;
+    height: 50%;
+    background: url('http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/c77aac9693b01df.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+
+body {
+    background: #F8C8DC;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-family: Pixel;
+}
+
+.footer-image {
+    width: 100%;
+    height: 50%;
+    background: url('../images/footer.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+/* pet */
+.wrapper {
+    width: 80%;
+    height: 40%;
+    padding: 0% 0% 0% 3%;
+    display: inline-flex;
+    align-items: center;
+}
+.alertbox {
+    position: relative;
+    bottom: 30%;
+    width: 50%;
+    height: 80%;
+    text-align: center;
+    visibility: hidden;
+}
+.alert {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.Pet {
+    width: 149px;
+    height: 172px;
+    overflow: hidden;
+}
+
+.Pet_spritesheet {
+    animation: movesprite 1s steps(2) infinite;
+}
+.textbox {
+    background-image: url('../images/textbox2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 60%;
+    display: none;
+}
+
+.message {
+    text-align: center;
+    padding: 3% 20% 15% 15%;
+}
+
+@keyframes movesprite {
+    from {
+        transform: translate3d(0px, 0, 0)
+    }
+    to {
+        transform: translate3d(-100%, 0, 0)
+    }
+}
+
+/* items */
+
+.Item1 {
+    width: 10%;
+    height: inherit;
+    position: relative;
+    left: 15%;
+    top: 22%;
+    overflow:hidden;
+    border: 5px solid transparent;
+}
+
+.Item1:hover {
+    border: 5px solid red;
+}
+
+.Item2 {
+    width: 15%;
+    height: 50%;
+    position: relative;
+    left: 50%;
+    top: 22%;
+}
+
+.Item2:hover {
+    border: 5px solid red;
+}
+
+.Item3 {
+    width:10%;
+    height:50%;
+    position: relative;
+    left: 35%;
+    top: 22%;
+}
+.Item3:hover {
+    border: 5px solid red;
+}
+
+.Item4 {
+    width:15%;
+    height:60%;
+    position: relative;
+    left: 13%;
+    top: 25%;
+}
+.Item4:hover {
+    border: 5px solid red;
+}
+
+.Item5 {
+    width:13%;
+    height:55%;
+    position: relative;
+    left: 25%;
+    top: 25%;
+}
+.Item5:hover {
+    border: 5px solid red;
+}
+
+.Item6 {
+    width:13%;
+    height:55%;
+    position: relative;
+    left: 40%;
+    top: 25%;
+}
+.Item6:hover {
+    border: 5px solid red;
+}

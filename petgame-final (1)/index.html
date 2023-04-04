@@ -1,0 +1,335 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>all about love: a virtual pet game</title>
+        <div class="header-image">
+            <img id="peach" class ="Item1" alt="Item" src="images/peach1.png"  onclick="peacheating(), updatehealth(1), sendmessage()">
+            <img id="cherry" class ="Item3" alt="Item" src="images/cherry6.png"  onclick="cherryeating(), updatehealth(1), sendmessage()">
+            <img id="hearttext" class ="Item2" alt="Item" src="images/hearttext4.png" onclick="hearteating(), updatehappiness(1), sendmessage()">
+        </div>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="alertbox" id="alertbox">
+                <img src="images/pinkbox.png" style="max-width: 100%; max-height: 100%;">
+                <p class="alert"> <span id="alert"> alert! </span></p>
+            </div>
+            <div class="Pet">
+            <img id="pet" class="Pet_spritesheet" alt="Pet" src="images/petdancing.png" onclick="updatehappiness(1), displayhehe()">
+            </div>
+            <div class="textbox" id="textbox">
+                    <p class="message"> <span id="msg">*</span> </p>
+            </div>
+        </div>
+        <p> health: <span id="health">6</span> ----- happiness: <span id="happiness">6</span</p>
+            <div id="healthbar"></div>
+            <div id="happinessbar"></div>
+    </body>
+
+    <footer>
+        <div class="footer-image">
+            <img id="book" class ="Item4" alt="Item" src="images/book5.png" onclick="bookopen(), updatehealth(1), sendmessage()">
+            <img id="gift" class ="Item5" alt="Item" src="images/gift3.png" onclick="giftopen(), updatehappiness(1), sendmessage()">
+            <img id="music" class ="Item6" alt="Item" src="images/music4.png" onclick="musicopen(), updatehappiness(1), sendmessage()">
+        </div>
+    </footer>
+
+            <script>
+                    var health = 6;
+                    var happiness = 6;
+                    var healthcounter = -1;
+                    var happinesscounter = -1;
+                    var fed = false;
+                    var played = false;
+
+                    const alerts1 = ["caring for another's needs is an important part of any relationship. give your pet some food", "i think its hungry", "..."];
+                    const alerts2 = ["love is not just care, but a combination of care, respect, trust, commitment, recognition, and affection. try showing your pet some affection with a gift", "there are so many love languages! spend some quality time with your pet, maybe put on some tunes!", "maybe some words of affirmation?", "..."];
+
+                document.addEventListener("DOMContentLoaded", function (){
+                    //initialize heatlh bar - is it easier to just call updatehealth(0)? without the clear thingy
+                    for (var i = 1; i <= health; i++) {
+                        var heart = document.createElement("img");
+                        heart.src = "images/heart.png";
+                        heart.height = "50"
+                        heart.width = "50"
+                        document.querySelector("#healthbar").appendChild(heart);
+                    }
+                    for (var i = health; i <= 10; i++) {
+                        var emptyh = document.createElement("img");
+                        emptyh.src = "images/emptyheart.png";
+                        emptyh.height = "50";
+                        emptyh.width = "50";
+                        document.querySelector("#healthbar").appendChild(emptyh);
+                    }
+
+                    window.setInterval(function mycounter() { //depletes healthbar by 1 heart every 20 seconds
+                        updatehealth( -1);
+                    }, 20000)
+
+                    // initialize happiness bar
+                    for (var i = 1; i <= happiness; i++) {
+                        var sparkle = document.createElement("img");
+                        sparkle.src = "images/sparkle.png";
+                        sparkle.height = "50";
+                        sparkle.width = "50";
+                        document.querySelector("#happinessbar").appendChild(sparkle);
+                    }
+                    for (var i = happiness; i <= 10; i++) {
+                        var sadsparkle = document.createElement("img");
+                        sadsparkle.src = "images/emptysparkle.png";
+                        sadsparkle.height = "50";
+                        sadsparkle.width = "50";
+                        document.querySelector("#happinessbar").appendChild(sadsparkle);
+                    }
+
+                    window.setInterval(function mycounter() { //depletes happinessbar by 1 sparkle every 30 seconds
+                        updatehappiness( -1);
+                    }, 30000)
+
+                    window.setInterval(function () { //changes pet's expression based on happiness and health
+                        if (((happiness == 4 || happiness == 5) && health > 3) || ((health == 4 || health == 5) && happiness > 3)) {
+                            document.getElementById("pet").src = "images/petstanding.png";
+                        }
+                        if (happiness >= 11 && health >= 11) {
+                            document.getElementById("pet").src = "images/petsparkle.png";
+                        }
+
+                        if ((happiness >= 6 && happiness <= 10) && (health >= 6 && health <= 10)) {
+                            document.getElementById("pet").src = "images/petdancing.png";
+                        }
+
+                        if (((happiness >= 6 && happiness <= 10) && health == 11) || ((health >= 6 && health <= 10) && happiness == 11)) {
+                            document.getElementById("pet").src = "images/pethappy.png";
+                        }
+
+                        if (health <= 3 && happiness <= 5) {
+                            document.getElementById("pet").src = "images/petsickcrying.png";
+                        }
+
+                        if (health <= 3 && happiness >= 6) {
+                            document.getElementById("pet").src = "images/petsick.png";
+                        }
+
+                        if (happiness <= 3 && (health >= 4)) {
+                            document.getElementById("pet").src = "images/petcrying.png";
+                        }
+                    }, 1000)
+
+                    window.setInterval(function healthalert() {
+                        //reminds player to feed pet if health falls below 5, up to 3 times.
+                        setTimeout(function () {
+                            if (health == 5 && fed == false && healthcounter < 3) {
+                            healthcounter++
+                            document.getElementById("alert").innerHTML = alerts1[healthcounter];
+                            document.querySelector("#alertbox").style.visibility = "visible";
+                            document.addEventListener("click", function()
+                                            {
+                                                document.querySelector("#alertbox").style.visibility = "hidden";
+                                            })
+                            }
+                            if (health == 3 && fed == false && healthcounter < 3) {
+                                //judges player if they let health fall below 3 after warnings, until player has maxed out healtalerts.
+                            healthcounter++
+                            document.getElementById("alert").innerHTML = "...";
+                            document.querySelector("#alertbox").style.visibility = "visible";
+                            document.addEventListener("click", function()
+                                            {
+                                                document.querySelector("#alertbox").style.visibility = "hidden";
+                                            })
+                            }
+                            if (health == 0) { //kills pet
+                                alert("you fucking killed it.");
+                                window.location.href = "death.html";
+                            }
+                                    }, 5000);
+
+                            //good ending. checks for maxed out health and happiness and displays thank you message
+                            if (happiness == 11 && health == 11) {
+                                alert("thank you for loving me :)")
+                            }
+                                    }, 20000)
+
+                  window.setInterval(function happinessalert() { //reminds player to play with pet if happiness falls below 5, up to 3 times.
+                        setTimeout(function () {
+                            if (happiness == 5 && played == false && happinesscounter < 4) {
+                            happinesscounter++
+                            document.getElementById("alert").innerHTML = alerts2[happinesscounter];
+                            document.querySelector("#alertbox").style.visibility = "visible";
+                            document.addEventListener("click", function()
+                                            {
+                                                document.querySelector("#alertbox").style.visibility = "hidden";
+                                            })
+                            }
+                            if (happiness == 3 && played == false && happinesscounter < 4) { //judges player if they let happiness fall below 3 after warnings, until player has maxed out happinessalerts.
+                            happinesscounter++
+                            document.getElementById("alert").innerHTML = '...';
+                            document.querySelector("#alertbox").style.visibility = "visible";
+                            document.addEventListener("click", function()
+                                            {
+                                                document.querySelector("#alertbox").style.visibility = "hidden";
+                                            })
+                            }
+                            if (happiness == 0) { //kills pet
+                                alert("it's dead! love cannot sustain itself on crumbs of affection");
+                                window.location.href = "death.html";
+                            }
+                                    }, 5000);
+                                    }, 30000)
+                alert(" .・゜゜・this is [all about love: a virtual pet game]・゜゜・");
+
+            }, 1000)
+
+                // update health ///
+                function updatehealth(amount) {
+                    fed = true;
+                    setTimeout(function () { //runs at 3.7 sec delay so that it matches up with eating animation
+                    if (health > 0 && health < 11) { //update health variable
+                        health = health + amount;
+                    }
+                    else if (health == 11 && amount < 0) {
+                        health = health + amount;
+                    }
+                    document.getElementById("healthbar").innerHTML = ""; //clear previous
+                    document.getElementById("health").innerHTML = health; //update onscreen
+                    for (var i = 1; i <= health; i++) { //update statbar with full hearts
+                        var heart = document.createElement("img");
+                        heart.src = "images/heart.png";
+                        heart.height = "50";
+                        heart.width = "50";
+                        document.querySelector("#healthbar").appendChild(heart);
+                    }
+                    for (var i = health; i <= 10; i++) {
+                        var empty = document.createElement("img");
+                        empty.src = "images/emptyheart.png";
+                        empty.height = "50";
+                        empty.width = "50";
+                        document.querySelector("#healthbar").appendChild(empty);
+                    }
+                    fed = false;
+                    }, 3700, amount);
+                }
+
+                // update happiness //
+
+                function updatehappiness(amount) {
+                    played = true;
+                    setTimeout(function () {
+                    if (happiness > 0 && happiness < 11) { //update happiness variable
+                        happiness = happiness + amount;
+                     }
+                    else if (happiness == 11 && amount < 0) {
+                        happiness = happiness + amount;
+                    }
+                    document.getElementById("happinessbar").innerHTML = ""; //clear previous
+                    document.getElementById("happiness").innerHTML = happiness; //update onscreen
+                    for (var i = 1; i <= happiness; i++) {
+                        var sparkle = document.createElement("img");
+                        sparkle.src = "images/sparkle.png";
+                        sparkle.height = "50";
+                        sparkle.width = "50";
+                        document.querySelector("#happinessbar").appendChild(sparkle);
+                    }
+                    for (var i = happiness; i <= 10; i++) {
+                        var sadsparkle = document.createElement("img");
+                        sadsparkle.src = "images/emptysparkle.png";
+                        sadsparkle.height = "50";
+                        sadsparkle.width = "50";
+                        document.querySelector("#happinessbar").appendChild(sadsparkle);
+                }
+                played = false;
+            }, 1000, amount);
+        }
+
+            // send message //
+
+            function sendmessage() {
+                setTimeout(function () {
+                if (health >= 7 && happiness >= 7)
+                    { // if happiness+happiness >= 7, display a message about love to the player when happiness updated
+                                document.getElementById("msg").innerHTML = random_msg();
+                                document.querySelector("#textbox").style.display = "block";
+                                document.addEventListener("click", function()
+                                    {
+                                        document.querySelector("#textbox").style.display = "none";
+                                    })
+                    }
+                }, 3700);
+                }
+            function displayhehe() {
+                if (health >= 5 && happiness >= 5) {
+                document.getElementById("msg").innerHTML = 'hehe :-)';
+                document.querySelector("#textbox").style.display = "block";
+                setTimeout(function() {
+                    document.querySelector("#textbox").style.display = "none";
+                }, 2000)
+            }}
+
+            // eating animations
+            function peacheating() {
+                for (var i = 2; i <= 6; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("peach").setAttribute("src", "images/peach"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            function cherryeating() {
+                for (var i = 2; i <= 6; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("cherry").setAttribute("src", "images/cherry"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            function hearteating() {
+                for (var i = 2; i <= 4; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("hearttext").setAttribute("src", "images/hearttext"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            function bookopen() {
+                for (var i = 2; i <= 5; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("book").setAttribute("src", "images/book"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            function giftopen() {
+                for (var i = 2; i <= 3; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("gift").setAttribute("src", "images/gift"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            function musicopen() {
+                for (var i = 2; i <= 4; i++) {
+                    (function(i) {
+                        setTimeout(function() {
+                            document.getElementById("music").setAttribute("src", "images/music"+i+".png");
+                        }, 500 * (i + 1));
+                    })(i);
+                }
+            }
+
+            // helper functions
+            function random_msg() {
+                const messages = ["i love you", "'love is care and attenion.'", "'love is an action. never simply a feeling.'", "'if there's any meaning at all, it's got to be love.'", "'the moment we choose love we begin to move towards freedom. to act in ways that liberate ourselves and others'", "'thank you for taking care of me.'"];
+                return messages[Math.floor(Math.random()*messages.length)];
+            }
+        </script>
+</html>
