@@ -10,6 +10,13 @@ Airtable.configure({
 });
 var base = Airtable.base('appYP6VqCWw0a5wKX');
 
+function redirect() {
+  console.log("redirect");
+  location.href = 'https://ghostmuji.github.io/interactive/billboard/yes-2.html';
+}
+
+
+
  document.getElementById("submit-button").addEventListener("click", function(e) {
    console.log("create_record");
 
@@ -29,9 +36,13 @@ var base = Airtable.base('appYP6VqCWw0a5wKX');
               }
               records.forEach(function(record) {
                   console.log(record.getId());
+
+                  setTimeout(redirect, 1000);
             
               });
           }); 
+
+
 });
 
 function done() {
