@@ -76,7 +76,7 @@ body {
               opacity: 0;
               position: absolute;
               top: 10px;
-              left: 20%;
+              left: 13%;
               animation:fade-in 2s ease-in 1;
               -webkit-animation:fade-in 2s ease-in 1;
               animation-fill-mode: forwards;
