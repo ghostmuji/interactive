@@ -46,6 +46,7 @@
             color: lightgreen;
             text-shadow: 0 0 10px #fff, 0 0 10px green;
             opacity: 90%;
+            z-index:0;
         }
 
         .rotate {
@@ -54,10 +55,40 @@
 
         #message-box {
             display: none;
+            text-align:center;
+            padding: 20px;
+            font-family: 'Noto Serif JP', serif;
         }
 
         #close-button {
             display: none;
+            font-family: 'Noto Serif JP', serif;
+            background: #FFF5EB;
+            border: none;
+            color: #add97a;
+        }
+
+        #big-box {
+            background: #FFF5EB;
+            border-radius: 60px;
+            box-shadow: 7px 7px 6px 3px #00743ca8;
+            position:absolute;
+            top:20%;
+            width:55%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding:20px;
+            z-index: 100;
+            color: #008847;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: fit-content;
+            flex-direction: column;
         }
 /*
 		@keyframes gradient {
@@ -96,11 +127,16 @@
     <h1> Please rotate your phone to landscape to view. </h1>
 </div>
 
-<div>
-<div id="message-box">
-    hi
+<div id="container">
+    <div id="big-box">
+        <div>
+            <center> ✿ </center>
+        </div>
+        <div id="message-box">
+            hi
+        </div>
+        <button id="close-button"> <i> close </i> </button>
     </div>
-<button id="close-button"> close </button>
 </div>
 
 <div class="flowers">
@@ -110,24 +146,24 @@
    <span class="user-flower" id="1">❃</span>       <span id="green-flowers">⚘</span>                 <span id="green-flowers">⚘</span>       <span class="user-flower" id="2">❋</span>
 
       <span class="user-flower" id="3">✽</span>         <span id="green-flowers">⚘</span>     <span id="green-flowers">⚘</span>          <span id="green-flowers">⚘</span>          <span id="green-flowers">⚘</span>
-            <span id="green-flowers">⚘</span>    <span id="green-flowers">⚘</span>           ❀                     <span id="green-flowers">⚘</span>
-     <span id="green-flowers">⚘</span>              <span id="green-flowers">⚘</span>              <span id="green-flowers">⚘</span>      ❀  <span id="green-flowers">⚘</span>
-                       ❀               <span id="green-flowers">⚘</span>
-  <span id="green-flowers">⚘</span>          ✽              <span id="green-flowers">⚘</span>    ✾              <span id="green-flowers">⚘</span>
-       ✾       ✿   <span id="green-flowers">⚘</span>                <span id="green-flowers">⚘</span>      ❁
-                      ❋        ✤      ✿
-   <span id="green-flowers">⚘</span>         <span id="green-flowers">⚘</span>                     ✽         <span id="green-flowers">⚘</span>   ❋
-        ❁           ❋     <span id="green-flowers">⚘</span>                <span id="green-flowers">⚘</span>
-     ✿           <span id="green-flowers">⚘</span>                   <span id="green-flowers">⚘</span>
+            <span id="green-flowers">⚘</span>    <span id="green-flowers">⚘</span>           <span class="user-flower" id="4">❀</span>                     <span id="green-flowers">⚘</span>
+     <span id="green-flowers">⚘</span>              <span id="green-flowers">⚘</span>              <span id="green-flowers">⚘</span>      <span class="user-flower" id="5">❀</span>  <span id="green-flowers">⚘</span>
+                       <span class="user-flower" id="6">❀</span>               <span id="green-flowers">⚘</span>
+  <span id="green-flowers">⚘</span>          <span class="user-flower" id="7">✽</span>              <span id="green-flowers">⚘</span>    <span class="user-flower" id="8">✾</span>              <span id="green-flowers">⚘</span>
+       <span class="user-flower" id="9">✾</span>       <span class="user-flower" id="10">✿</span>   <span id="green-flowers">⚘</span>                <span id="green-flowers">⚘</span>      <span class="user-flower" id="11">❁</span>
+                      <span class="user-flower" id="0">❋</span>        <span class="user-flower" id="12">✤</span>      <span class="user-flower" id="13">✿</span>
+   <span id="green-flowers">⚘</span>         <span id="green-flowers">⚘</span>                     <span class="user-flower" id="14">✽</span>         <span id="green-flowers">⚘</span>   <span class="user-flower" id="15">❋</span>
+        <span class="user-flower" id="16">❁</span>           <span class="user-flower" id="17">❋</span>     <span id="green-flowers">⚘</span>                <span id="green-flowers">⚘</span>
+     <span class="user-flower" id="18">✿</span>           <span id="green-flowers">⚘</span>                   <span id="green-flowers">⚘</span>
                                <span id="green-flowers">⚘</span>               <span id="green-flowers">⚘</span>
- <span id="green-flowers">⚘</span> <span id="green-flowers">⚘</span>     <span id="green-flowers">⚘</span>    ❀         ✾              <span id="green-flowers">⚘</span>   ❃
+ <span id="green-flowers">⚘</span> <span id="green-flowers">⚘</span>     <span id="green-flowers">⚘</span>    <span class="user-flower" id="19">❀</span>         <span class="user-flower" id="20">✾</span>              <span id="green-flowers">⚘</span>   <span class="user-flower" id="21">❃</span>
                      <span id="green-flowers">⚘</span>          <span id="green-flowers">⚘</span>           <span id="green-flowers">⚘</span>
        <span id="green-flowers">⚘</span>                              <span id="green-flowers">⚘</span>
-    <span id="green-flowers">⚘</span>       <span id="green-flowers">⚘</span>       ❁    ✾     ✽                  <span id="green-flowers">⚘</span>
-                            ✿       ❃
+    <span id="green-flowers">⚘</span>       <span id="green-flowers">⚘</span>       <span class="user-flower" id="22">❁</span>    <span class="user-flower" id="23">✾</span>     <span class="user-flower" id="24">✽</span>                  <span id="green-flowers">⚘</span>
+                            <span class="user-flower" id="25">✿</span>       <span class="user-flower" id="26">❃</span>
               <span id="green-flowers">⚘</span>                <span id="green-flowers">⚘</span>         <span id="green-flowers">⚘</span>
-      <span id="green-flowers">⚘</span>                ❀
-          <span id="green-flowers">⚘</span>       <span id="green-flowers">⚘</span>        <span id="green-flowers">⚘</span>       ❁           <span id="green-flowers">⚘</span>
+      <span id="green-flowers">⚘</span>                <span class="user-flower" id="27">❀</span>
+          <span id="green-flowers">⚘</span>       <span id="green-flowers">⚘</span>        <span id="green-flowers">⚘</span>       <span class="user-flower" id="28">❁</span>           <span id="green-flowers">⚘</span>
 	</pre>
 </div>
 

@@ -96,12 +96,14 @@ function show_message() {
     var current_message = messages[current_flower];
     document.getElementById("message-box").innerHTML = current_message;
     document.getElementById("message-box").style.display = "block";
+    document.getElementById("big-box").style.display = "flex";
      document.getElementById("close-button").style.display = "block";
 
 }
 
 function hide_message() {
     document.getElementById("message-box").style.display = "none";
+    document.getElementById("big-box").style.display = "none";
     document.getElementById("close-button").style.display = "none";
 }
 
