@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> grief </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class=centered id="form">
+        <div class="child" id="prompt"> <h1> if you could speak to<br>them one last time,<br> what would you say? </h1> </div>
+        <textarea id="response" rows="4" cols="50" placeholder="Type here">
+</textarea>
+        <div class="child"> <button class="button" onclick="done()"> done </button> </div>
+    </div>
+
+    <div class=centered id="submit">
+      <div class="child" id="prompt"> <h1>Would you like to<br>plant this message<br>in our garden?<br><br> (It will be anonymous.)</h1> </div>
+        <div class="child"> <button class="button" id="submit-button"> <a href="./yes-2.html">yes </a> </button></div>
+        <div class="child"> <button class="button"> <a href="./no-3.html"> no </a> </button> </div>
+    </div>
+<script src="js/airtable.browser.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
