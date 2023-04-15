@@ -62,12 +62,21 @@ function consoleLogRows() {
 
 var messages = [];
 
+var flowers = document.getElementsByClassName("user-flower");
+
+var message_counter = 0;
+
 // showRows is what puts the content onto the HTML page
 function showRows() {
     console.log("showRows()");
     rows.forEach((row) => {
         messages.push(row.fields.responses);
-        console.log(messages)
+        console.log(messages);
+
+        flowers[message_counter].style.display = "inline";
+
+        message_counter++;
+
 
 
 
@@ -83,7 +92,7 @@ function showRows() {
     })
 }
 
-var flowers = document.getElementsByClassName("user-flower");
+
 
 for (var i=0; i<flowers.length; i++) {
     flowers[i].addEventListener("click", show_message);
