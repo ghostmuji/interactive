@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>station sweet station</title>
+    <style>
+      body, html {
+          height: 100%;
+          margin: 0;
+          font-family: courier, monospace;
+          color: #ffe383;
+        }
+
+      .bg {
+        background-image: url("2nd-floor background.png");
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+      }
+
+      .myimg {
+        padding: 0;
+        opacity:50%;
+        transition: 0.5s all ease-in-out;
+
+      }
+
+      .myimg:hover {
+        opacity:100%;
+      }
+
+      .photos {
+        background: rgba(0, 0, 0, 0.5);
+        display:none;
+        align-content: center;
+        flex-direction:column;
+        position:absolute;
+        z-index: 100;
+        max-height: 100%;
+        overflow: scroll;
+      }
+
+      .photos img {
+        max-width:50%;
+        max-height:30%;
+        padding:20px;
+      }
+
+      #photos2 {
+        flex-direction:row;
+      }
+
+      .backbutton {
+        padding:20px;
+
+      }
+
+       a:link {
+        color: #e9fffd;
+      text-decoration: none;}
+
+a:visited {
+  color: #e9fffd;
+      text-decoration: none;
+}
+
+a:hover {
+      color: #90f8ee;
+      text-decoration: none;
+}
+
+a:active {
+      color: #90f8ee;
+      text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+
+
+    </div>
+    <div class="bg">
+
+      <div class=photos id=photo1>
+      <center>
+      <img src="mad.png" width="50%" height="30%">
+      <p>on the couch!!</p>
+      <img src="1.png">
+      <p>family photo <3 </p>
+      <img src="dog.png">
+      <p>giovanni the italian jewish dog</p>
+      <img src="fisher.png">
+      <p id=closebutton style="color:#aee3b8;">close</p>
+    </center>
+      </div>
+
+    <div class=photos id=photo2>
+      <img src="flowers.png"> 
+      <div> &nbsp; &nbsp; &nbsp;for garrett</div>
+    <center>
+      <p id=closebutton2 style="color:#aee3b8;">close</p>
+    </center>
+  </div>
+
+      <div class=photos id=photo3>
+      <img src="creeper.png"> 
+      <div> &nbsp; &nbsp; &nbsp; creeper tucked in</div>
+    <center>
+      <p id=closebutton3 style="color:#aee3b8;">close</p>
+    </center>
+    </div>
+
+      <div class=backbutton>
+      <a href="./index.html"> back </a>
+      </div>
+      <img src="couch.png" class=myimg id="couch">
+      <img src="vinyl.png" class=myimg id="vinyl">
+      <img src="chair.png" class=myimg id="chair">
+
+   
+    </div>
+
+    <script>
+      /* for couch */
+    var couchImage = document.getElementById('couch');
+    var photosElement = document.getElementById('photo1');
+
+    couchImage.addEventListener('click', function() {
+      photosElement.style.display = 'flex';
+    });
+
+    var closebutton = document.getElementById('closebutton');
+    closebutton. addEventListener('click', function() {
+      photosElement.style.display = 'none';
+    });
+
+    /* for vinyl */
+    var vinylImage = document.getElementById('vinyl');
+    var photos2Element = document.getElementById('photo2');
+
+    vinylImage.addEventListener('click', function() {
+      photos2Element.style.display = 'flex';
+    });
+
+    var closebutton2 = document.getElementById('closebutton2');
+    closebutton2.addEventListener('click', function() {
+      photos2Element.style.display = 'none';
+    });
+
+    /* for chair */
+    var chairImage = document.getElementById('chair');
+    var photos3Element = document.getElementById('photo3');
+
+    chairImage.addEventListener('click', function() {
+      photos3Element.style.display = 'flex';
+    });
+
+    var closebutton3 = document.getElementById('closebutton3');
+    closebutton3.addEventListener('click', function() {
+      photos3Element.style.display = 'none';
+    });
+
+
+  </script>
+  </body>
+</html>
